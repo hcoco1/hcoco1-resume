@@ -16,7 +16,6 @@
     "@astrojs/rss": "^3.0.0",
     "@astrojs/sitemap": "^3.0.0",
     "@astrojs/tailwind": "^5.0.0",
-    "@astrojs/vercel": "^5.1.0",
     "astro": "^3.4.3",
     "daisyui": "^3.2.1",
     "dayjs": "^1.11.9",
