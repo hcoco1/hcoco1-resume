@@ -10,9 +10,21 @@ const { image, title = SITE_TITLE, description = SITE_DESCRIPTION, includeSideba
 ---
 
 <!DOCTYPE html>
-<html lang="en" data-theme="retro">
+<html lang="en">
   <head>
     <BaseHead title={title} description={description} image={image} />
+    <script is:inline>
+      // This script prevents the FART effect by setting the theme before the page is rendered.
+      if (localStorage.getItem("theme") === null) {
+        document.documentElement.setAttribute("data-theme", "retro");
+      } else {
+        document.documentElement.setAttribute("data-theme", localStorage.getItem("theme"));
+      }
+    </script>
+    <script type="module">
+      import { themeChange } from 'theme-change';
+      themeChange();
+    </script>
   </head>
   <body>
     <div class="bg-base-100 drawer lg:drawer-open">
@@ -28,5 +40,10 @@ const { image, title = SITE_TITLE, description = SITE_DESCRIPTION, includeSideba
       </div>
       {includeSidebar && <SideBar sideBarActiveItemID={sideBarActiveItemID} />}
     </div>
+        <script type="module">
+      import { themeChange } from 'https://cdn.skypack.dev/theme-change';
+      themeChange(true);
+    </script>
   </body>
 </html>
+

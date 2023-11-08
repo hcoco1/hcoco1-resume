@@ -1,3 +1,61 @@
 .time-line-container>div:last-child .education__time>.education__line {
     display: none;
 }
+
+:root {
+  --color-bg: #ffffff; /* Default background color */
+  --color-text: #000000; /* Default text color */
+  /* Define other default custom properties */
+}
+
+[data-theme='dark'] {
+  --color-bg: #000000; /* Dark mode background color */
+  --color-text: #ffffff; /* Dark mode text color */
+  /* Override other custom properties for dark mode */
+}
+
+[data-theme='retro'] {
+  --color-bg: #f5f5dc; /* Retro background color */
+  --color-text: #2f4f4f; /* Retro text color */
+  /* Override other custom properties for retro mode */
+}
+[data-theme='pink'] {
+  --my-color: #ffabc8;
+}
+
+/* Add custom properties for other themes as needed */
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+
+.theme-switcher {
+  /* Add padding, margins, and any other styles you want for the container */
+  padding: 10px;
+  margin-bottom: 20px;
+  text-align: center; /* Center the select if the theme-switcher div is full width */
+}
+
+.theme-switcher select {
+  /* Style your select element */
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  cursor: pointer;
+}
+
+/* You can also style the select element on focus */
+.theme-switcher select:focus {
+  outline: none;
+  border-color: var(--color-primary);
+}
+
+/* Style the options inside the select */
+.theme-switcher select option {
+  padding: 5px;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}

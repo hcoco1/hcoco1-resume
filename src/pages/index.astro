@@ -3,23 +3,40 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import HorizontalCard from "../components/HorizontalCard.astro";
 import { getCollection } from "astro:content";
 
-const posts = (await getCollection("blog")).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+const posts = (await getCollection("blog")).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+);
 
 const last_posts = posts.slice(0, 3);
 ---
 
 <BaseLayout sideBarActiveItemID="home">
+  <!-- Theme switcher buttons -->
+  <div class="theme-switcher">
+    <select data-choose-theme>
+      <option value="">Default</option>
+      <option value="dark">Dark</option>
+      <option value="retro">Retro</option>
+    </select>
+    <!-- Add more buttons for additional themes if you have them -->
+  </div>
   <div class="pb-12 mt-5">
     <div class="text-xl py-1">Hey there 👋</div>
     <div class="text-5xl font-bold">I'm Ivan Arias</div>
     <div class="text-3xl py-3 font-bold">Software Engineer and Geologist</div>
     <div class="py-2">
       <text class="text-lg">
-        Proficient with Python, Flask, and JavaScript-based programming. Geological modeling and Geographic Information System (GIS) background. Strong interpersonal and team-building skills. Seek to join an innovative and collaborative team focused on creating and executing cutting-edge software solutions that enhance business productivity.
+        Proficient with Python, Flask, and JavaScript-based programming.
+        Geological modeling and Geographic Information System (GIS) background.
+        Strong interpersonal and team-building skills. Seek to join an
+        innovative and collaborative team focused on creating and executing
+        cutting-edge software solutions that enhance business productivity.
       </text>
     </div>
     <div class="mt-8">
-      <a class="btn" href="https://twitter.com/hcoco1" target="_blank"> Let's connect!</a>
+      <a class="btn" href="https://twitter.com/hcoco1" target="_blank">
+        Let's connect!</a
+      >
     </div>
   </div>
 
@@ -47,7 +64,6 @@ const last_posts = posts.slice(0, 3);
     img="https://a57.foxnews.com/static.foxbusiness.com/foxbusiness.com/content/uploads/2023/03/931/506/FLORIDA-REAL-ESTATE-HOME-SALE-GETTY.jpg?ve=1&tl=1"
     desc="Real Estate Site (RES) is a REACT/REACT-BOOTSTRAP/REACT-ROUTER app that accesses data from a web database."
     url="https://youtu.be/gTGiYxPJ-Dk"
-    
   />
 
   <div>

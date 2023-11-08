@@ -5,14 +5,12 @@ import { getCollection } from "astro:content";
 
 export async function getStaticPaths({ paginate }) {
   const posts = await getCollection("blog");
-  console.log(posts.length);
-  console.log(posts);
   posts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
   return paginate(posts, { pageSize: 10 });
 }
 
 const { page } = Astro.props;
-console.log(JSON.stringify(page, null, 2));
+
 ---
 
 <BaseLayout title="Blog" sideBarActiveItemID="blog">
