@@ -1,7 +1,7 @@
 ---
 title:  "Phase 4 Study Guide"
 description: "Welcome to my comprehensive study guide designed to help you master Flask! This guide is divided into multiple modules, each focusing on a specific topic related to Flask, such as routing, database interactions, API development, and more."
-pubDate: "2022-12-30T11:39:36.050Z"
+pubDate: "Sep 21 2023"
 heroImage: "https://images.unsplash.com/photo-1504384764586-bb4cdc1707b0?auto=format&fit=crop&w=927&h=927"
 badge: "Flatiron School"
 tags: ["flask","extensions"]

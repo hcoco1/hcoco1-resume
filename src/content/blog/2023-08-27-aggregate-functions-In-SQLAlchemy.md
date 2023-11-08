@@ -1,7 +1,7 @@
 ---
 title:  "Aggregate functions"
 description: "In this tutorial, I will use SQLAlchemy to perform aggregate operations on a database containing information about states, counties, cities, and government facilities...."
-pubDate: "2023-08-27T11:39:36.050Z"
+pubDate: "Aug 27 2023"
 heroImage: "https://images.unsplash.com/photo-1549685571-ac77ccac479e?auto=format&fit=crop&w=927&h=927"
 badge: "Alembic Sqlalchemy"
 tags: ["backend","database"]

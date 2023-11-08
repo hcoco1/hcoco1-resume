@@ -1,7 +1,7 @@
 ---
 title:  "JS Dynamic List"
 description: "Since I had difficulty showing a list of items in the Document Object Model (DOM) in my final phase-1 Project. I decided to blog about DOM manipulation using Javascript."
-pubDate: "2022-12-30T11:39:36.050Z"
+pubDate: "May 01 2023"
 heroImage: "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?auto=format&fit=crop&w=927&h=927"
 badge: "Vanilla Js"
 tags: ["fetch()","splice()"]

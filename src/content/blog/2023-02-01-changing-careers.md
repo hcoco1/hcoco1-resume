@@ -1,7 +1,7 @@
 ---
 title:  "Changing careers"
 description: "Changing careers is is exciting and intimidating, and some people think that starting a new job is challenging and impossible for adults and seniors ..."
-pubDate: "2022-12-30T11:39:36.050Z"
+pubDate: "Jan 02 2023"
 heroImage: "https://images.unsplash.com/photo-1608431727066-629d1d55dfde?auto=format&fit=crop&w=927&h=927"
 badge: "Life"
 tags: ["career","programming"]

@@ -1,7 +1,7 @@
 ---
 title:  "Building a Navigation Bar using React Router"
 description: "A navigation bar (or navigation system) is a section of a graphical user interface intended to aid visitors in accessing information."
-pubDate: "2023-10-07T11:39:36.050Z"
+pubDate: "Oct 07 2023"
 heroImage: "https://images.unsplash.com/photo-1522542550221-31fd19575a2d?auto=format&fit=crop&w=927&h=927"
 badge: "Final Project"
 tags: ["front-end","back-end"]
