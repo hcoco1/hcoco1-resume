@@ -6,5 +6,9 @@ import tailwind from "@astrojs/tailwind";
 // https://astro.build/config
 export default defineConfig({
   site: 'https://resume.hcoco1.com/',
-  integrations: [mdx(), sitemap(), tailwind()]
+  integrations: [mdx(), sitemap(), tailwind()],
+  socialMedia: {
+    image: '/public/profile.jpg',
+    description: 'Ivan Arias| Full Stack Development with Flask and React | Geologist'
+  }
 });
