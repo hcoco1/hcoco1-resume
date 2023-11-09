@@ -32,6 +32,9 @@ dependencies:
   tailwindcss:
     specifier: ^3.3.5
     version: 3.3.5
+  theme-change:
+    specifier: ^2.5.0
+    version: 2.5.0
 
 devDependencies:
   '@tailwindcss/typography':
@@ -3916,6 +3919,10 @@ packages:
       b4a: 1.6.4
       fast-fifo: 1.3.2
       streamx: 2.15.1
+    dev: false
+
+  /theme-change@2.5.0:
+    resolution: {integrity: sha512-B/UdsgdHAGhSKHTAQnxg/etN0RaMDpehuJmZIjLMDVJ6DGIliRHGD6pODi1CXLQAN9GV0GSyB3G6yCuK05PkPQ==}
     dev: false
 
   /thenify-all@1.6.0:
