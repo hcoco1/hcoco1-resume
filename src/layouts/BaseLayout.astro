@@ -6,10 +6,16 @@ import SideBar from "../components/SideBar.astro";
 
 import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
 
-const { image, title = SITE_TITLE, description = SITE_DESCRIPTION, includeSidebar = true, sideBarActiveItemID } = Astro.props;
+const {
+  image,
+  title = SITE_TITLE,
+  description = SITE_DESCRIPTION,
+  includeSidebar = true,
+  sideBarActiveItemID,
+} = Astro.props;
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <BaseHead title={title} description={description} image={image} />
@@ -18,11 +24,14 @@ const { image, title = SITE_TITLE, description = SITE_DESCRIPTION, includeSideba
       if (localStorage.getItem("theme") === null) {
         document.documentElement.setAttribute("data-theme", "retro");
       } else {
-        document.documentElement.setAttribute("data-theme", localStorage.getItem("theme"));
+        document.documentElement.setAttribute(
+          "data-theme",
+          localStorage.getItem("theme"),
+        );
       }
     </script>
     <script type="module">
-      import { themeChange } from 'theme-change';
+      import { themeChange } from "theme-change";
       themeChange();
     </script>
   </head>
@@ -33,6 +42,16 @@ const { image, title = SITE_TITLE, description = SITE_DESCRIPTION, includeSideba
         <Header title={SITE_TITLE} />
         <div class="md:flex md:justify-center">
           <main class="p-6 pt-10 lg:max-w-[900px] max-w-[100vw]">
+
+            <div class="theme-switcher">
+               <label for="themeSelector">Theme:   </label>
+              <select data-choose-theme>
+                <option value="">Default</option>
+                <option value="dark">Dark</option>
+                <option value="retro">Retro</option>
+              </select>
+            </div>
+            
             <slot />
           </main>
         </div>
@@ -40,10 +59,9 @@ const { image, title = SITE_TITLE, description = SITE_DESCRIPTION, includeSideba
       </div>
       {includeSidebar && <SideBar sideBarActiveItemID={sideBarActiveItemID} />}
     </div>
-        <script type="module">
-      import { themeChange } from 'https://cdn.skypack.dev/theme-change';
+    <script type="module">
+      import { themeChange } from "https://cdn.skypack.dev/theme-change";
       themeChange(true);
     </script>
   </body>
 </html>
-
