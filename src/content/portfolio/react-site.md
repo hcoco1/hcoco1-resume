@@ -2,7 +2,7 @@
 title: "My Web Site (React Router version)"
 description: "My last site looked good, but I wasn't happy with it. I wanted to build  web page using something other than pre-build templates"
 custom_link_label: "Live App"
-custom_link: "https://hcoco1.com/"
+custom_link: "https://hcoco1-site.onrender.com"
 updatedDate: "Jun 1 2023"
 pricing: "Web Site"
 oldPricing: "https://github.com/hcoco1/hcoco1-site"
