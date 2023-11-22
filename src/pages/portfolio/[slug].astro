@@ -4,7 +4,7 @@ import { StoreSchema } from "../../content/config";
 import StoreItemLayout from "../../layouts/StoreItemLayout.astro";
 
 export async function getStaticPaths() {
-  const itemEntries = await getCollection("store");
+  const itemEntries = await getCollection("portfolio");
   return itemEntries.map((entry) => ({
     params: { slug: entry.slug },
     props: { entry },
@@ -12,7 +12,7 @@ export async function getStaticPaths() {
 }
 
 interface Props {
-  entry: CollectionEntry<"store">;
+  entry: CollectionEntry<"portfolio">;
 }
 
 const { entry } = Astro.props;
