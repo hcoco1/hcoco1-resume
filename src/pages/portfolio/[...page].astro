@@ -11,7 +11,10 @@ export async function getStaticPaths({ paginate }) {
 const { page } = Astro.props;
 ---
 
-<BaseLayout title="Projects" sideBarActiveItemID="portfolio">
+<BaseLayout title="Portfolio" sideBarActiveItemID="portfolio">
+    <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Portfolio 🗃️</div>
+  </div>
   <ul>
     {
       page.data.map((item) => (
