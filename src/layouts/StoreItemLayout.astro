@@ -39,8 +39,8 @@ import { Image } from "astro:assets";
         </h1>
         <div class="flex place-content-between items-center">
           <div class="grow md:grow-0">
-            <span class="text-xl mr-1"> {pricing}</span>
-            <span class="text-md opacity-50 line-through">{oldPricing}</span>
+            <span class="badge badge-info mr-1"> {pricing}</span>
+            
           </div>
           <div>
             {
@@ -50,7 +50,20 @@ import { Image } from "astro:assets";
                 </a>
               )
             }
-            <a class="btn btn-primary grow md:grow-0 ml-4" href={checkoutUrl} target="_blank">Buy Now</a>
+            {checkoutUrl && (
+              <a class="btn btn-outline grow md:grow-0 ml-4" href={checkoutUrl} target="_blank">
+                Demo
+              </a>
+            )
+
+            }
+            
+
+
+
+
+
+            <a class="btn btn-outline grow md:grow-0 ml-4" href={oldPricing} target="_blank">GitHub</a>
           </div>
         </div>
       </div>
