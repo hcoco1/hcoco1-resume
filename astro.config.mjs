@@ -5,7 +5,7 @@ import tailwind from "@astrojs/tailwind";
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://resume.hcoco1.com/',
+  site: 'https://hcoco1.com/',
   integrations: [mdx(), sitemap(), tailwind()],
   socialMedia: {
     image: '/public/profile.jpg',
