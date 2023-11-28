@@ -61,7 +61,9 @@ const {
       {includeSidebar && <SideBar sideBarActiveItemID={sideBarActiveItemID} />}
     </div>
     <script type="module">
-      import { themeChange } from "https://cdn.skypack.dev/theme-change";
+      import { themeChange } from "theme-change";
+
+      themeChange(true);
       themeChange(true);
     </script>
   </body>
