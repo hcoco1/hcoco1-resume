@@ -2,7 +2,7 @@
   "extends": "astro/tsconfigs/base",
   "compilerOptions": {
     "strictNullChecks": true,
-    "baseUrl": "/home/hcoco1/hcoco1-resume",
+    "baseUrl": ".",
     "paths": {
       "@components/*": [
         "src/components/*"
