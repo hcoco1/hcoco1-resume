@@ -53,7 +53,7 @@ ad1f9b6cbcee6cd3efa6438149db5c1c  config.conf
 ```
 ###### **Fig.3** Command to hash the `config.conf` file (md5sum)
 
-With a clear understanding of the file's location, permissions, and integrity status, the process to edit the config.conf file was undertaken. The Vim text editor was used to append the configuration lines (**Figure 2. [admin]: AliceAdmin1 & IvanAdmin2**) to enable proper logging functionality within the Splunk server. 
+With a clear understanding of the file's location, permissions, and integrity status, the process to edit the config.conf file was undertaken. The Vim text editor was used to append the configuration lines: **[admin]: AliceAdmin1 & IvanAdmin2** to enable proper logging functionality within the Splunk server. 
 
 ```bash
 fstack@:/opt/splunk/etc/system/local$ vim config.conf
@@ -73,7 +73,8 @@ fstack@:/opt/splunk/etc/system/local$ vim config.conf
  - Riley
  - Sara
 
-[admin]
+# Configuration lines added
+[admin]             
    ─ AliceAdmin1
    ─ IvanAdmin2
 ~                                                                                         
