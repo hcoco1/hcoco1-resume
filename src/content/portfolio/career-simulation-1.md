@@ -14,11 +14,11 @@ This report outlines resolving a critical issue encountered within StackFull Sof
 
 The narrative underscores the collaborative efforts and systematic troubleshooting to rectify the issue successfully, restoring functionality to the logging system and enabling SOC analysts to monitor and respond to cyber incidents effectively.
 Recommendations to enhance the integrity, availability, and confidentiality of the `config.conf` file include:
-- restricting access based on roles and responsibilities,
-- conducting regular audits of file permissions,
-- encrypting configuration files,
-- deploying a File Integrity Monitoring tool, and
-- regularly backing up configuration files.
+- Restricting access based on roles and responsibilities,
+- Conducting regular audits of file permissions,
+- Encrypting configuration files,
+- Deploying a File Integrity Monitoring tool, and
+- Regularly backing up configuration files.
 
 
 ## Introduction:
