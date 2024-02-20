@@ -1,10 +1,10 @@
 ---
-title:  "Asset and Inventory Management"
+title:  "Cyber Incident Response"
 description: "This report outlines resolving a critical issue encountered within StackFull Software's cybersecurity operations...."
 pubDate: "Feb 18 2024"
 heroImage: "https://images.unsplash.com/photo-1660644807804-ffacfd7a4137?auto=format&fit=crop&w=927&h=927"
 badge: "Career Simulation 1"
-tags: ["linux","forensic"]
+tags: ["linux","cybersecurity"]
 
 ---
 
