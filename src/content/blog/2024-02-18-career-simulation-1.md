@@ -2,7 +2,7 @@
 title:  "Asset and Inventory Management"
 description: "This report outlines resolving a critical issue encountered within StackFull Software's cybersecurity operations...."
 pubDate: "Feb 18 2024"
-heroImage: "https://images.unsplash.com/photo-1660644807804-ffacfd7a4137?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+heroImage: "https://images.unsplash.com/photo-1660644807804-ffacfd7a4137?auto=format&fit=crop&w=927&h=927"
 badge: "Career Simulation 1"
 tags: ["linux","forensic"]
 
