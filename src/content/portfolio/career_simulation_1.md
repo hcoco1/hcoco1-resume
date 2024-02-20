@@ -8,7 +8,6 @@ tags: ["linux","forensic"]
 
 ---
 
-
 ## Executive Summary:
 
 This report outlines resolving a critical issue encountered within StackFull Software's cybersecurity operations, specifically related to a misconfiguration in the `config.conf` file, which impeded access to essential logs within the Splunk SIEM system. The document details the process undertaken to rectify this issue, ensuring the proper functioning of logging for cybersecurity operations. It delineates the steps involved in identifying the problem, locating the `config.conf` file, assessing its permissions, editing it, verifying its integrity, and creating a backup. Additionally, recommendations are provided to enhance confidentiality and integrity measures surrounding Splunk configuration files.
