@@ -151,4 +151,4 @@ Fortinet. What is the CIA Triad and Why is it important? | Fortinet. (n.d.).  ht
 Cloudflare. What is the principle of least privilege? | Cloudflare. (n.d.).  https://www.cloudflare.com/learning/access-management/principle-of-least-privilege/
 
 
-McBrien, S. (2023, January 12). Linux file permissions explained. Enable Sysadmin. Linux file permissions explained | Enable Sysadmin
+McBrien, S. (2023, January 12). Linux file permissions explained. https://www.redhat.com/sysadmin/linux-file-permissions-explained
