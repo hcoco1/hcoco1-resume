@@ -23,8 +23,17 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
   <div class="time-line-container grid gap-4 mb-10">
     <TimeLineElement
     title="Cloud Engineer"
-    subtitle="Feb 2024 to Sep 2024 at <a href='https://example.com'>Digital Cloud Training</a>, online, USA."
+    subtitle={
+      <>
+        Feb 2024 to Sep 2024 at{' '}
+        <a href="https://digitalcloud.training/cloud-mastery-bootcamp/" target="_blank" rel="noopener noreferrer">
+          Digital Cloud Training
+        </a>
+        , online, USA.
+      </>
+    }
   />
+  
   
 
     <TimeLineElement
