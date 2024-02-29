@@ -17,11 +17,11 @@ Recently, I enrolled in the <a href="https://digitalcloud.training/cloud-mastery
 * HashiCorp Certified: Terraform Associate
 * Certified Kubernetes Administrator (CKA)
 
-The Cloud Mastery Bootcamp provides training for a broad set of cloud job roles including Cloud Engineer, DevOps Engineer, or Solutions Architect. *<small>(Digital Cloud Training, 2024)</small>*. I expect to advance in my <a href="https://www.hcoco1.com/cv" target="_blank">professional career</a> and get a position as a cloud professional :money_with_wings:.
+The Cloud Mastery Bootcamp provides training for a broad set of cloud job roles including Cloud Engineer, DevOps Engineer, or Solutions Architect. *<small>(Digital Cloud Training, 2024)</small>*. I expect to advance in my <a href="https://www.hcoco1.com/cv" target="_blank">professional career</a> and get a position as a cloud professional. 💸
 
-**Cloud Foundations and Linux** training is the first module of the Bootcamp, and it provides a pretty excellent overview of the following topics:
+Cloud Foundations and Linux *<small>(Digital Cloud Training, 2024)</small>* training is the first module of the Bootcamp, and it provides a pretty excellent overview of the following topics:
 
-**Cloud Computing and AWS:** Cloud computing delivers services over the internet, including servers, storage, databases, networking, and software. AWS, a leader in the market, offers IaaS, PaaS, and SaaS solutions, enabling organizations to scale operations with on-demand resources and pay-as-you-go models *<small>(What-is-cloud-computing, n.d.)</small>*.
+**Cloud Computing and AWS:** 💻 Cloud computing delivers services over the internet, including servers, storage, databases, networking, and software. AWS, a leader in the market, offers IaaS, PaaS, and SaaS solutions, enabling organizations to scale operations with on-demand resources and pay-as-you-go models *<small>(What-is-cloud-computing, n.d.)</small>*.
 
 **Compute and Storage Services:** AWS provides compute options like EC2 for virtual servers, Lambda for serverless computing, and ECS for containerized workloads. Storage solutions include S3, offering scalable and secure object storage *<small>(What-is-cloud-computing, n.d.)</small>*.
 
@@ -37,7 +37,7 @@ I am so excited about learning all these AWS applications. The first thing that 
 
 ---
 
-**<span style="color:gray"> In short, enrolling in the Cloud Mastery Bootcamp and pursuing five AWS cloud certifications signifies my commitment to advancing in the Cloud Computing field. Through ongoing learning and practical experience, I aim to become a successful cloud professional, making meaningful contributions to the cloud computing field.**
+**<span style="color:gray"> In short, enrolling in the Cloud Mastery Bootcamp and pursuing five AWS cloud certifications signifies my commitment to advancing in the Cloud Computing field. Through ongoing learning and practical experience, I aim to become a successful cloud professional, making meaningful contributions to the cloud computing field.** ☁️
 
 ---
 
@@ -46,6 +46,5 @@ I am so excited about learning all these AWS applications. The first thing that 
 
 Digital Cloud Training. (2024, February 25). Cloud Mastery Bootcamp: AWS, Linux, Python, Kubernetes, Terraform. https://digitalcloud.training/cloud-mastery-bootcamp/
 
-What-is-cloud-computing. (n.d.). [Video]. Amazon Web Services, Inc. https://aws.amazon.com/what-is-cloud-computing/
+What-is-cloud-computing. (n.d.). Amazon Web Services, Inc. https://aws.amazon.com/what-is-cloud-computing/
 
-Ivan Arias. (n.d.). https://www.hcoco1.com/
