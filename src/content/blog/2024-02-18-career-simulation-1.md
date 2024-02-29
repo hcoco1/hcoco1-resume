@@ -21,9 +21,9 @@ The first unit of the program provides a complete revision of the following topi
 
 **Career Simulation 1:** Put cybersecurity skills to the test as a SOC Analyst 1 for a fictitious company, where you'll work to solve and report a configuration file problem (Academy, 2024).
 
-In addition to mastering the fundamentals, I am set on obtaining the **AWS Certified Security certification**. This certification will validate my expertise in securing AWS environments and open doors to exciting opportunities in cloud security.
+In addition to mastering the fundamentals, I am set on obtaining the **<a href="https://aws.amazon.com/certification/certified-security-specialty/" target="_blank">AWS Certified Security certification</a>**. This certification will validate my expertise in securing AWS environments and open doors to exciting opportunities in cloud security.
 
-I want to share my progress and learning journey with all of you through this post. I'll be documenting my experiences, insights, and challenges as I navigate through the world of cybersecurity. Your feedback and suggestions are highly valued, so feel free to share your thoughts via the <a href="https://www.hcoco1.com/contact" target="_blank">contact form</a>.
+I want to share my progress and learning journey with all of you through this blog. I'll be documenting my experiences, insights, and challenges as I navigate through the world of cybersecurity. Your feedback and suggestions are highly valued, so feel free to share your thoughts via the <a href="https://www.hcoco1.com/contact" target="_blank">contact form</a>.
 
 ---
 
@@ -72,7 +72,7 @@ With Splunk storing its files within the /opt/splunk directory, the first step w
 ```bash
 fstack@:~$ find /opt/splunk/ -name "config.conf"
 /opt/splunk/etc/system/local/config.conf
-``` 
+```
 <small>**Fig.1** Command to locate the `config.conf` file (find)</small>
 
 
@@ -167,23 +167,22 @@ To enhance the integrity, availability, and confidentiality of the config.conf f
 
 - Create a cron job to check and ensure the integrity of the config.conf periodically using the md5sum command.
 
-   ```bash
-   # Open the crontab editor
-   crontab -e
-   # Add the following line to the crontab file to run the integrity check every day at 2 AM
-   0 2 * * * md5sum /opt/splunk/etc/system/local/config.conf > /var/log/config_checksum.log
-   ```
+    ```bash
+    # Open the crontab editor
+    crontab -e
+    # Add the following line to the crontab file to run the integrity check every day at 2 AM
+    0 2 * * * md5sum /opt/splunk/etc/system/local/config.conf > /var/log/config_checksum.log
+    ```
 
 
 - Create a cron job to schedule regular backups of the config.conf file to ensure data redundancy and availability.
 
-
-   ```bash
-   # Open the crontab editor
-   crontab -e
-   # backup
-   0 0 * * * tar -czf /backup/config_backup_$(date +\%Y\%m\%d).tar.gz /opt/splunk/etc/system/local/config.conf
-   ```
+    ```bash
+    # Open the crontab editor
+    crontab -e
+    # backup
+    0 0 * * * tar -czf /backup/config_backup_$(date +\%Y\%m\%d).tar.gz /opt/splunk/etc/system/local/config.conf
+    ```
 
 
 
