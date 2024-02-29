@@ -1,4 +1,5 @@
 ---
+layout: post
 title:  "My Cloud Computing Journey"
 description: "After graduating with a certification as a Software Engineer, I started exploring other fields like cybersecurity and cloud computing...."
 pubDate: "Feb 28 2024"
@@ -6,6 +7,7 @@ heroImage: "https://images.unsplash.com/photo-1667984390538-3dea7a3fe33d?auto=fo
 badge: "Cloud Mastery Bootcamp"
 tags: ["aws","linux"]
 canonical_url: 'https://www.hcoco1.com/blog/2024-02-28-cloud-computing'
+categories: aws, linux
 ---
 **Hey there! 🚀 It's been a while since my last post, but I'm back with some exciting news I can't wait to share with you all. I've been on an incredible journey diving into the world of AWS, and I'm eager to take you along with me!**
 
