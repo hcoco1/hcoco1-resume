@@ -5,7 +5,6 @@ pubDate: "Feb 18 2024"
 heroImage: "https://images.unsplash.com/photo-1660644807804-ffacfd7a4137?auto=format&fit=crop&w=927&h=927"
 badge: "Cybersecurity Bootcamp"
 tags: ["linux","cybersecurity"]
-canonical_url: 'https://www.hcoco1.com/blog/2024-02-18-career-simulation-1'
 ---
 
 Hey there 🚀, everyone! I'm super excited to kick off my adventure into cybersecurity. After getting my software engineer certification last year and enrolling in the <a href="https://digitalcloud.training/cloud-mastery-bootcamp/?megamenu" target="_blank">Cloud Mastery Bootcamp</a> this month, I've decided to dive into something new and fascinating.

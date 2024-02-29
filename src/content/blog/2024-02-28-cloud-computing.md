@@ -39,11 +39,7 @@ Networking Fundamentals and VPC: AWS offers networking services, including Amazo
 
 I am so excited about learning all these AWS applications. The first thing that came to my mind when I learned about AWS applications was to migrate <a href="https://www.hcoco1.com/portfolio" target="_blank">all my web apps and web pages</a> to AWS. So,  I am anxious to start the Developer Associate module to migrate and create websites and web applications using AWS services. One project that's been on my mind is deploying my <a href="https://www.hcoco1.com/portfolio/database-tool" target="_blank">Python command-line interface project</a> using Docker containers on AWS.
 
----
-
 #### **<span style="color:green"> In short, enrolling in the Cloud Mastery Bootcamp and pursuing five AWS cloud certifications signifies my commitment to advancing in the Cloud Computing field. Through ongoing learning and practical experience, I aim to become a successful cloud professional, making meaningful contributions to the cloud computing field.**
-
----
 
 **References:**
 
