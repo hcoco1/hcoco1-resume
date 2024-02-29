@@ -23,7 +23,7 @@ The first unit of the program provides a complete revision of the following topi
 
 In addition to mastering the fundamentals, I am set on obtaining the **AWS Certified Security certification**. This certification will validate my expertise in securing AWS environments and open doors to exciting opportunities in cloud security.
 
-I want to share my progress and learning journey with all of you through this blog. I'll be documenting my experiences, insights, and challenges as I navigate through the world of cybersecurity. Your feedback and suggestions are highly valued, so feel free to share your thoughts via the <a href="https://www.hcoco1.com/contact" target="_blank">contact form</a>.
+I want to share my progress and learning journey with all of you through this post. I'll be documenting my experiences, insights, and challenges as I navigate through the world of cybersecurity. Your feedback and suggestions are highly valued, so feel free to share your thoughts via the <a href="https://www.hcoco1.com/contact" target="_blank">contact form</a>.
 
 ---
 
