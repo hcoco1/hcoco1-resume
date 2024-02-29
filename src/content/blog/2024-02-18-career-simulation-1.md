@@ -52,7 +52,8 @@ It looks like James, another Level 1 SOC Analyst has inadvertently changed a con
 - <span style="color:blue">Restricting access based on roles and responsibilities
 - <span style="color:blue">Conducting regular audits of file permissions
 - <span style="color:blue">Encrypting configuration files
-- <span style="color:blue">Incorporate tools for automation, such as cron jobs, to automate recurring tasks.- Regularly backing up configuration files.
+- <span style="color:blue">Incorporate tools for automation, such as cron jobs, to automate recurring tasks.
+- <span style="color:blue">Regularly backing up configuration files.
 
 
 ## Introduction:
@@ -71,7 +72,7 @@ With Splunk storing its files within the /opt/splunk directory, the first step w
 ```bash
 fstack@:~$ find /opt/splunk/ -name "config.conf"
 /opt/splunk/etc/system/local/config.conf
-```
+``` 
 <small>**Fig.1** Command to locate the `config.conf` file (find)</small>
 
 
@@ -161,33 +162,36 @@ drwxr-xr-x  2 fstack fstack   4096 Aug 31  2022  Videos
 ## Suggestions:
 
 To enhance the integrity, availability, and confidentiality of the config.conf file, the following suggestions can be applied:
-1.-  Restrict access to the config.conf file based on roles and responsibilities within the organization. Limit access to only authorized personnel who require it for their job functions. This helps prevent unauthorized modifications and ensures only relevant individuals can change the configuration.
-2. Create a cron job to check and ensure the integrity of the config.conf periodically using the md5sum command.
 
-```bash
-# Open the crontab editor
-crontab -e
-# Add the following line to the crontab file to run the integrity check every day at 2 AM
-0 2 * * * md5sum /opt/splunk/etc/system/local/config.conf > /var/log/config_checksum.log
-```
+- Restrict access to the config.conf file based on roles and responsibilities within the organization. Limit access to only authorized personnel who require it for their job functions. This helps prevent unauthorized modifications and ensures only relevant individuals can change the configuration.
 
+- Create a cron job to check and ensure the integrity of the config.conf periodically using the md5sum command.
 
-3. Create a cron job to schedule regular backups of the config.conf file to ensure data redundancy and availability.
-
-```bash
-# Open the crontab editor
-crontab -e
-# backup
-0 0 * * * tar -czf /backup/config_backup_$(date +\%Y\%m\%d).tar.gz /opt/splunk/etc/system/local/config.conf
-```
+   ```bash
+   # Open the crontab editor
+   crontab -e
+   # Add the following line to the crontab file to run the integrity check every day at 2 AM
+   0 2 * * * md5sum /opt/splunk/etc/system/local/config.conf > /var/log/config_checksum.log
+   ```
 
 
+- Create a cron job to schedule regular backups of the config.conf file to ensure data redundancy and availability.
 
 
-4.- Regularly Audit File Permissions: Conduct regular audits of file permissions to ensure they adhere to the principle of least privilege. Review and adjust permissions as necessary to restrict access to the config.conf file to only those individuals who require it for their job roles. This helps mitigate the risk of unauthorized access and modifications.
+   ```bash
+   # Open the crontab editor
+   crontab -e
+   # backup
+   0 0 * * * tar -czf /backup/config_backup_$(date +\%Y\%m\%d).tar.gz /opt/splunk/etc/system/local/config.conf
+   ```
 
 
-5.- Encrypt Configuration Files: Encrypt the config.conf file to protect sensitive information stored within it. Encryption ensures that even if unauthorized individuals gain access to the file, they cannot decipher its contents without the proper decryption key. This helps safeguard confidential data and maintains the confidentiality of the configuration settings.
+
+
+- Regularly Audit File Permissions: Conduct regular audits of file permissions to ensure they adhere to the principle of least privilege. Review and adjust permissions as necessary to restrict access to the config.conf file to only those individuals who require it for their job roles. This helps mitigate the risk of unauthorized access and modifications.
+
+
+- Encrypt Configuration Files: Encrypt the config.conf file to protect sensitive information stored within it. Encryption ensures that even if unauthorized individuals gain access to the file, they cannot decipher its contents without the proper decryption key. This helps safeguard confidential data and maintains the confidentiality of the configuration settings.
 
 ---
 
