@@ -4,7 +4,7 @@ description: "Welcome to my comprehensive study guide designed to help you maste
 pubDate: "Sep 21 2023"
 heroImage: "https://images.unsplash.com/photo-1504384764586-bb4cdc1707b0?auto=format&fit=crop&w=927&h=927"
 badge: "Flatiron School"
-tags: ["flask","extensions"]
+tags: ["flask","sqlalchemy"]
 
 ---
 

@@ -4,7 +4,7 @@ description: "In this tutorial, I will use SQLAlchemy to perform aggregate opera
 pubDate: "Aug 27 2023"
 heroImage: "https://images.unsplash.com/photo-1549685571-ac77ccac479e?auto=format&fit=crop&w=927&h=927"
 badge: "Alembic Sqlalchemy"
-tags: ["backend","database"]
+tags: ["python","sqlalchemy"]
 
 
 ---

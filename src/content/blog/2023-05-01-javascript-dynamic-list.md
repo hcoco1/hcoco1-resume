@@ -4,9 +4,7 @@ description: "Since I had difficulty showing a list of items in the Document Obj
 pubDate: "May 01 2023"
 heroImage: "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?auto=format&fit=crop&w=927&h=927"
 badge: "Vanilla Js"
-tags: ["fetch()","splice()"]
-
-
+tags: ["javascript","list"]
 
 ---
 

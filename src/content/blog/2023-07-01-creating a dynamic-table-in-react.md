@@ -4,8 +4,7 @@ description: "In web development, tables are commonly used to display structured
 pubDate: "Jul 01 2023"
 heroImage: "https://images.unsplash.com/photo-1529078155058-5d716f45d604?auto=format&fit=crop&w=927&h=927"
 badge: "react-table "
-tags: ["useSortBy","useMemo"]
-
+tags: ["table","react"]
 
 ---
 

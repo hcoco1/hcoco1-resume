@@ -4,7 +4,7 @@ description: "Changing careers is is exciting and intimidating, and some people 
 pubDate: "Jan 02 2023"
 heroImage: "https://images.unsplash.com/photo-1608431727066-629d1d55dfde?auto=format&fit=crop&w=927&h=927"
 badge: "Life"
-tags: ["career","programming"]
+tags: ["career","web-development"]
 ---
 
 

@@ -5,8 +5,8 @@ pubDate: "Feb 18 2024"
 heroImage: "https://images.unsplash.com/photo-1660644807804-ffacfd7a4137?auto=format&fit=crop&w=927&h=927"
 badge: "Career Simulation 1"
 tags: ["linux","cybersecurity"]
-
 ---
+
 ## Scenario
 
 "You're just getting started at StackFull Software. Alice, a Level 2 SOC Analyst, has been assigned as your mentor to help you learn the ropes at your new company. She's educating you on the various business units you'll be working with, such as software engineering, human resources, business development, and of course, information technology (IT). Your department, the cybersecurity department, falls under the IT business unit.
