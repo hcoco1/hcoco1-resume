@@ -17,7 +17,7 @@ Recently, I enrolled in the <a href="https://digitalcloud.training/cloud-mastery
 * <a href="https://www.hashicorp.com/certification/terraform-associate" target="_blank">HashiCorp Certified: Terraform Associate</a>
 * <a href="https://learn.digitalcloud.training/course/certified-kubernetes-administrator-cka-real-world" target="_blank">Certified Kubernetes Administrator (CKA)</a>
 
-The Cloud Mastery Bootcamp provides training for a broad set of cloud job roles including Cloud Engineer, DevOps Engineer, or Solutions Architect. *<small>(Digital Cloud Training, 2024)</small>*. I expect to advance in my <a href="https://www.hcoco1.com/cv" target="_blank">professional career</a> and get a position as a cloud professional :money_with_wings:.
+The Cloud Mastery Bootcamp provides training for a broad set of cloud job roles including Cloud Engineer, DevOps Engineer, or Solutions Architect. *<small>(Digital Cloud Training, 2024)</small>*. I expect to advance in my <a href="https://www.hcoco1.com/cv" target="_blank">professional career</a> and get a position as a cloud professional.
 
 **Cloud Foundations and Linux** training is the first module of the Bootcamp, and it provides a pretty excellent overview of the following topics:
 
