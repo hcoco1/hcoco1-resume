@@ -1,15 +1,14 @@
 ---
-layout: post
+
 title:  "My Cloud Computing Journey"
 description: "After graduating with a certification as a Software Engineer, I started exploring other fields like cybersecurity and cloud computing...."
 pubDate: "Feb 28 2024"
 heroImage: "https://images.unsplash.com/photo-1667984390538-3dea7a3fe33d?auto=format&fit=crop&w=927&h=927"
 badge: "Cloud Mastery Bootcamp"
 tags: ["aws","linux"]
-canonical_url: 'https://hcoco1.com/blog/2024-02-28-cloud-computing'
-categories: aws, linux
+
 ---
-<!--more-->
+
 
 **Hey there! 🚀 It's been a while since my last post, but I'm back with some exciting news I can't wait to share with you all. I've been on an incredible journey diving into the world of AWS, and I'm eager to take you along with me!**
 
@@ -40,14 +39,12 @@ Networking Fundamentals and VPC: AWS offers networking services, including Amazo
 
 I am so excited about learning all these AWS applications. The first thing that came to my mind when I learned about AWS applications was to migrate <a href="https://www.hcoco1.com/portfolio" target="_blank">all my web apps and web pages</a> to AWS. So,  I am anxious to start the Developer Associate module to migrate and create websites and web applications using AWS services. One project that's been on my mind is deploying my <a href="https://www.hcoco1.com/portfolio/database-tool" target="_blank">Python command-line interface project</a> using Docker containers on AWS.
 
-
 ---
 
 #### **<span style="color:green"> In short, enrolling in the Cloud Mastery Bootcamp and pursuing five AWS cloud certifications signifies my commitment to advancing in the Cloud Computing field. Through ongoing learning and practical experience, I aim to become a successful cloud professional, making meaningful contributions to the cloud computing field.**
 
 ---
 
- 
 **References:**
 
 Digital Cloud Training. (2024, February 25). Cloud Mastery Bootcamp: AWS, Linux, Python, Kubernetes, Terraform. https://digitalcloud.training/cloud-mastery-bootcamp/
