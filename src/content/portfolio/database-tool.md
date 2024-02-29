@@ -42,7 +42,7 @@ heroImage: "https://www.web-alliance.co.uk/blog/admin/blg_img/1663842396_1654089
 ```
 If you want to check a step-by-step installation process tutorial of a reduced version of this project, please click on the following link:
 
- * https://blog-sbun.onrender.com/coding/2023/08/27/aggregate-functions-In-SQLAlchemy.html
+ * https://www.hcoco1.com/blog/2023-08-27-aggregate-functions-in-sqlalchemy
 
 ## How to navigate in DT:
 
