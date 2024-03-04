@@ -3,17 +3,13 @@ import { type BlogSchema } from "../content/config";
 import BaseLayout from "./BaseLayout.astro";
 import dayjs from "dayjs";
 import localizedFormat from "dayjs/plugin/localizedFormat";
-import { Image } from "astro:assets";
 
 export interface Props extends BlogSchema {}
 
 const { title, description, pubDate, updatedDate, heroImage, badge, tags = [] } = Astro.props;
 dayjs.extend(localizedFormat);
-const displayDate = dayjs(pubDate).format("ll");
-
-const pageUrl = `${window.location.origin}${window.location.pathname}`;
-const pageIdentifier = encodeURIComponent(window.location.pathname);
-
+const displayDate = dayjs(pubDate).format("ll")
+import { Image } from "astro:assets";
 ---
 
 <BaseLayout title={title} description={description} image={heroImage}>
@@ -43,25 +39,7 @@ const pageIdentifier = encodeURIComponent(window.location.pathname);
       <div class="divider my-2"></div>
       <slot />
     </article>
-
-    <div id="disqus_thread"></div>
-    <script>
-      /**
-      *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-      *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
-      var disqus_config = function () {
-        this.page.url = '{pageUrl}';  // Replace '{pageUrl}' with your page's canonical URL variable
-        this.page.identifier = '{pageIdentifier}'; // Replace '{pageIdentifier}' with your page's unique identifier variable
-      };
-
-      (function() { // DON'T EDIT BELOW THIS LINE
-        var d = document, s = d.createElement('script');
-        s.src = 'https://hcoco1.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date() as unknown as string);
-
-        (d.head || d.body).appendChild(s);
-      })();
-    </script>
-    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    
   </main>
+
 </BaseLayout>
