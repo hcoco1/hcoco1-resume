@@ -43,24 +43,25 @@ It looks like James, another Level 1 SOC Analyst has inadvertently changed a con
 
 ## ** Report:**
 
-## <span style="color:blue"> Executive Summary:
+##  Executive Summary:
 
-<span style="color:blue">This report outlines resolving a critical issue encountered within StackFull Software's cybersecurity operations, specifically related to a misconfiguration in the `config.conf` file, which impeded access to essential logs within the Splunk SIEM system. The document details the process undertaken to rectify this issue, ensuring the proper functioning of logging for cybersecurity operations. It delineates the steps involved in identifying the problem, locating the `config.conf` file, assessing its permissions, verifying its integrity, and creating a backup. Additionally, recommendations are provided to enhance confidentiality and integrity measures surrounding Splunk configuration files.
+This report outlines resolving a critical issue encountered within StackFull Software's cybersecurity operations, specifically related to a misconfiguration in the `config.conf` file, which impeded access to essential logs within the Splunk SIEM system. The document details the process undertaken to rectify this issue, ensuring the proper functioning of logging for cybersecurity operations. It delineates the steps involved in identifying the problem, locating the `config.conf` file, assessing its permissions, verifying its integrity, and creating a backup. Additionally, recommendations are provided to enhance confidentiality and integrity measures surrounding Splunk configuration files.
 
-<span style="color:blue">The narrative underscores the collaborative efforts and systematic troubleshooting to rectify the issue successfully, restoring functionality to the logging system and enabling SOC analysts to monitor and respond to cyber incidents effectively.Recommendations to enhance the integrity, availability, and confidentiality of the `config.conf` file include:
+The narrative underscores the collaborative efforts and systematic troubleshooting to rectify the issue successfully, restoring functionality to the logging system and enabling SOC analysts to monitor and respond to cyber incidents effectively.Recommendations to enhance the integrity, availability, and confidentiality of the `config.conf` file include:
 
-- <span style="color:blue">Restricting access based on roles and responsibilities
-- <span style="color:blue">Conducting regular audits of file permissions
-- <span style="color:blue">Encrypting configuration files
-- <span style="color:blue">Incorporate tools for automation, such as cron jobs, to automate recurring tasks.
-- <span style="color:blue">Regularly backing up configuration files.
+- Restricting access based on roles and responsibilities
+- Conducting regular audits of file permissions
+- Encrypting configuration files
+- Incorporate tools for automation, such as cron jobs, to automate recurring tasks.
+- Regularly backing up configuration files.
 
 
-## Introduction:
+## Introduction
 
 This report explains how we addressed a significant issue in StackFull Software's cybersecurity operations. The problem derived from a misconfiguration in the config.conf file, which obstructed access to crucial logs within the Splunk SIEM system. The primary purpose of this report is to detail the resolution process, ensuring effective logging functionality for cybersecurity purposes. It covers the stages of a digital forensics investigation, such as acquisition, preservation, analysis, and presentation, alongside recommendations for enhancing confidentiality and integrity measures related to Splunk configuration files.
 
-## Body:
+## Body
+
 Upon encountering the access issue in Splunk, a SOC Analyst was promptly informed of the situation and guided in resolving the problem. Following the standard phases of digital forensics investigation, the process of managing the misconfiguration in the configuration.conf file was initiated.
 
 **Stage Identification:**
@@ -154,12 +155,13 @@ drwxr-xr-x  2 fstack fstack   4096 Aug 31  2022  Videos
 ```
 <small>**Fig.6** Commands to backup and list the config.conf file (tar, ls -l)</small>
 
-## <span style="color:green">Conclusion:
- <span style="color:green">The issue with accessing logs within the Splunk server was resolved through collaborative efforts and systematic troubleshooting. The modifications made to the config.conf file restored functionality to the logging system, aligning with the objectives of the digital forensics investigation stages. 
- 
- <span style="color:green">This document details the steps undertaken to identify and resolve the access issue within the Splunk system, explicitly targeting the misconfiguration present in the config.conf file. By documenting the acquisition, preservation, analysis, and presentation stages of digital forensics, it offers a comprehensive record of the investigative process.
+## Conclusion
 
-## Suggestions:
+ >The issue with accessing logs within the Splunk server was resolved through collaborative efforts and systematic >troubleshooting. The modifications made to the config.conf file restored functionality to the logging system, aligning with >the objectives of the digital forensics investigation stages. 
+ 
+ >This document details the steps undertaken to identify and resolve the access issue within the Splunk system, explicitly >targeting the misconfiguration present in the config.conf file. By documenting the acquisition, preservation, analysis, and >presentation stages of digital forensics, it offers a comprehensive record of the investigative process.
+
+## Suggestions
 
 To enhance the integrity, availability, and confidentiality of the config.conf file, the following suggestions can be applied:
 
