@@ -12,7 +12,7 @@ tags: ["aws","linux"]
 
 **Hey there! 🚀 It's been a while since my last post, but I'm back with some exciting news I can't wait to share with you all. I've been on an incredible journey diving into the world of AWS, and I'm eager to take you along with me!**
 
- After graduating with a certification as a Software Engineer, I started exploring other fields like <a href="https://www.hcoco1.com/blog/2024-02-18-career-simulation-1" target="_blank">cybersecurity</a> and cloud computing. I am writing this post to share my starting journey through the AWS world with all of you. 
+ After graduating with a certification as a Software Engineer, I started exploring other fields like <a href="https://www.hcoco1.com/blog/2024-02-18-cyber-career" target="_blank">cybersecurity</a> and cloud computing. I am writing this post to share my starting journey through the AWS world with all of you. 
 
 Recently, I enrolled in the <a href="https://digitalcloud.training/cloud-mastery-bootcamp/?megamenu" target="_blank">Cloud Mastery Bootcamp</a> to acquire cloud computing skills and  earn five cloud certifications: 
 * <a href="https://aws.amazon.com/certification/certified-cloud-practitioner/" target="_blank">AWS Certified Cloud Practitioner</a>
