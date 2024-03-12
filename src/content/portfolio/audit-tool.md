@@ -20,8 +20,11 @@ heroImage: "https://images.unsplash.com/photo-1613206485381-b028e578e791?q=80&w=
 
 Audits Tool is a React-based solution designed to streamline the process of storing and managing audit data in a user-friendly manner. It allows users to input audit details such as usernames, process paths, and audit descriptions, which are then saved locally and can be viewed or deleted. Additionally, the app offers a feature to generate and download comprehensive audit reports, enhancing the efficiency of audit compilation and review.
 
+---
 
-![alt text](https://github.com/hcoco1/todo-list-local-storage/blob/main/audit_tool.png)
+![Audits Tool](https://github.com/hcoco1/todo-list-local-storage/blob/main/audit_tool.png?raw=true)
+
+---
 
 ### Core Functionalities:
 
