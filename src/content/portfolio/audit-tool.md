@@ -14,45 +14,52 @@ heroImage: "https://images.unsplash.com/photo-1613206485381-b028e578e791?q=80&w=
 
 ## Project: Audits Tool.
 
-### Live App: https://hcoco1.github.io/todo-list-local-storage/
+### Live App: https://audits.hcoco1.com/
 
 ### Project Pitch:
 
 Audits Tool is a React-based solution designed to streamline the process of storing and managing audit data in a user-friendly manner. It allows users to input audit details such as usernames, process paths, and audit descriptions, which are then saved locally and can be viewed or deleted. Additionally, the app offers a feature to generate and download comprehensive audit reports, enhancing the efficiency of audit compilation and review.
 
-### Description:
 
-Managing audits can often feel like navigating through a labyrinth in the bustling world of logistics and operations. The complexity of tracking numerous processes, ensuring compliance, and maintaining records can be overwhelming. I experienced this challenge in my job, where compiling audits became a task that consumed excessive time and energy, detracting from the efficiency and productivity of our operations. The need for a solution was clear: a tool that could streamline the audit process, making it more manageable and accessible. So, I created a simple yet powerful application designed to store and display audits in a user-friendly manner.
+![alt text](https://github.com/hcoco1/todo-list-local-storage/blob/main/audit_tool.png)
 
-### Idea:
+### Core Functionalities:
 
-The core idea was to develop an app that simplifies adding and managing audit data and provides a seamless way to generate reports. The goal was to make an intuitive app that allows users to input and retrieve audit information easily.
+CRUD Operations: Implements Create, Read, Update, and Delete operations for todo items, facilitated by React's stateful components and hooks (useState for state management and useEffect for operations with side effects, such as localStorage manipulation).
 
-### Project Structure:
+Persistence: Utilizes the Web Storage API (localStorage) for persistence, ensuring that user data remains intact across browser sessions.
 
-The application's structure is straightforward. It utilizes React's useState hook to manage the state of audits (or "todos" in the context of the code), storing them locally in the browser's localStorage. As a result, data persists even after the browser is closed, providing a persistent storage solution without needing a backend database.
+### Technical Stack:
 
----
-![how this app works](https://github.com/hcoco1/todo-list-local-storage/blob/main/audit_tool.png?raw=true) 
+React.js: Employs React for its component-based architecture, enabling the encapsulation of UI parts and reuse of components (e.g., TodoItem, TodoForm). React's virtual DOM ensures efficient updates and rendering of components based on state changes.
 
----
+CSS3: Leverages CSS for styling, applying Flexbox and Media Queries to achieve a responsive design that adapts to various screen sizes and devices.
 
-### How it works?
+FontAwesome: Integrated for icons, enhancing UX with visually appealing elements for actions like delete, edit, and social media links.
 
-Users can add new audits through a simple form, inputting details such as the username, process path, and audit description. The form is designed to be intuitive, with placeholders and dropdown menus guiding the user through the data entry process. Upon submission, the audit is added to the list, and the form is reset and ready for the next entry.
+### Architecture and Components:
 
-### Features:
+TodoForm: A reusable form component, encapsulating input logic and submission handling. It dynamically updates the parent component's state on user interaction.
 
-One critical feature of this app is its ability to capitalize the first letter of specific inputs automatically, ensuring consistency and readability in the data stored. This small but significant detail enhances the user experience by reducing the need for manual text formatting.
+TodoList and TodoItem: TodoList manages the collection of TodoItem components, each representing a task with options to edit or delete. This separation concerns aligns with React's compositional model, promoting code readability and maintainability.
 
-The application also includes functionality to delete individual audits, allowing users to manage their records easily. This feature ensures that the audit list remains relevant and up-to-date, reflecting the current state of operations.
+Footer with SocialMediaLink: Demonstrates composition in React, where Footer contains multiple SocialMediaLink components. Each SocialMediaLink is a reusable component configured with props for different social platforms, illustrating how props can customize component behavior and presentation.
 
-The app's most powerful feature is its report-generation capability. With a single click, users can compile the audits into a downloadable text file. This capability makes sharing audit reports with stakeholders incredibly easy and provides a clear and concise overview of the audits conducted.
+### Deployment and Custom Domain Configuration:
 
->In short, the development of this audit management application was driven by the need to simplify the complex process of handling audits. By leveraging React and modern web technologies, I created a tool that not only meets this need but also enhances the overall efficiency of audit management. This app stands as a testament to the power of technology in solving practical problems, making the daunting task of audit compilation a thing of the past.
+GitHub Pages: Utilized for its simplicity in deploying static sites directly from a GitHub repository, offering a streamlined workflow for pushing updates and managing releases.
+
+Custom Subdomain Configuration: Involves setting a CNAME record in GoDaddy’s DNS settings to point the chosen subdomain (audits.hcoco1.com) to the GitHub Pages URL. This process exemplifies domain management and the integration of external DNS services with GitHub-hosted projects.
+
+### Development Best Practices:
+
+Modular Design: The app's structure encourages modularity and component reuse, reducing redundancy and facilitating scalability.
+
+State Management: Leverages React hooks for local state management within components, providing a clear pattern for handling user input and application state.
+
+Responsive Design: Implements responsive web design principles, ensuring the app's UI is accessible and user-friendly across devices.
 
 ### Future enhancements:
 
-- Adding a button to edit audits.
-
 - Adding authentication.
+- Adding a database.
