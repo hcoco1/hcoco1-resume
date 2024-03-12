@@ -2,7 +2,7 @@
 title: "Audits Tool"
 description: "Audits Tool is a React-based solution designed to streamline the process of storing and managing audit data in a user-friendly manner."
 custom_link_label: "Live App"
-custom_link: "https://hcoco1.github.io/todo-list-local-storage/"
+custom_link: "https://audits.hcoco1.com/"
 updatedDate: "March 6 2024"
 pricing: "Web App"
 badge: "New"
