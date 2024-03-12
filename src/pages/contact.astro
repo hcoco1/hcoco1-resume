@@ -13,37 +13,36 @@ import Contactform from "@components/contactform.astro";
   </div>
 
   <div class="grid md:grid-cols-2 gap-10 mx-auto max-w-4xl mt-10">
-    <div
-      <p
-        class="text-lg leading-relaxed text-black-800 dark:text-white-800 mt-1"
-      >
-      Do you have something to say? I am here to help. Fill out the form, send an email, or call me.
+    <div>
+      <p class="text-lg leading-relaxed text-black dark:text-white mt-1">
+        Do you have something to say? I am here to help. Fill out the form, send an email, or call me.
       </p>
-      <div class="mt-5">
-        <div
-          class="flex items-center mt-2 space-x-2 text-black-800 dark:text-white-800"
-        >
-          <Icon class="text-gray-400 w-4 h-4" name="uil:map-marker" />
-          <span>Orlando, Fl 32801</span>
-        </div>
+    </div>
+    
+    <div class="mt-5">
+      <div
+        class="flex items-center mt-2 space-x-2 text-black-800 dark:text-white-800"
+      >
+        <Icon class="text-gray-400 w-4 h-4" name="uil:map-marker" />
+        <span>Orlando, Fl 32801</span>
+      </div>
 
-        <div
-          class="flex items-center mt-2 space-x-2 text-black-800 dark:text-white-800"
+      <div
+        class="flex items-center mt-2 space-x-2 text-black-800 dark:text-white-800"
+      >
+        <Icon class="text-gray-400 w-4 h-4" name="uil:envelope" /><a
+          href="mailto:arias.ivan@hcoco1.com">arias.ivan@hcoco1.com</a
         >
-          <Icon class="text-gray-400 w-4 h-4" name="uil:envelope" /><a
-            href="mailto:arias.ivan@hcoco1.com">arias.ivan@hcoco1.com</a
-          >
-        </div><div
-          class="flex items-center mt-2 space-x-2 text-black-800 dark:text-white-800"
+      </div><div
+        class="flex items-center mt-2 space-x-2 text-black-800 dark:text-white-800"
+      >
+        <Icon class="text-gray-400 w-4 h-4" name="uil:phone" /><a
+          href="tel:+1 (407) 9173535">+1 (407) 917 3535</a
         >
-          <Icon class="text-gray-400 w-4 h-4" name="uil:phone" /><a
-            href="tel:+1 (407) 9173535">+1 (407) 917 3535</a
-          >
-        </div>
       </div>
     </div>
-    <div>
-      <Contactform />
-    </div>
+  </div>
+  <div>
+    <Contactform />
   </div>
 </BaseLayout>
