@@ -20,7 +20,7 @@ Why was I looking to solve someone else's problems? The pressure to create a tre
 
 ---
 
-![Why](https://images.unsplash.com/photo-1620424393934-04e772be09f4?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D?auto=format&fit=crop&w=500&h=5000raw=true)
+![Why](https://images.unsplash.com/photo-1620424393934-04e772be09f4?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D?auto=format&fit=crop&w=500&h=500raw=true)
 
 ---
 
@@ -32,9 +32,13 @@ The phrase " I want to solve real-world problems through coding" kept appearing 
 
 After a challenging outline process, the <a href="https://audits.hcoco1.com/" target="_blank">Audits Tool 🦾</a> was born. It is a taking notes app that allows users to input audit details such as usernames, process paths, and audit descriptions, which are then saved locally and can be viewed or deleted. Additionally, the app offers a feature to generate and download comprehensive audit reports.
 
-**I am proud of this app because I use it, and it works great! I am still testing it and will add new features to improve the user experience. So, finally, I did it 😏. I created a web application and solved a real-world problem.**
+I am proud of this app because I use it, and it works great! I am still testing it and will add new features to improve the user experience. Also, I plan to migrate Audits Tool 🦾 to the AWS platform and add features like authentication and a database.
 
->I am still waiting 🕜 for my first IT job, but I am exploring other fields, like <a href="https://www.hcoco1.com/blog/2024-02-28-cloud-computing" target="_blank">AWS</a> and <a href="https://www.hcoco1.com/blog/2024-02-18-cyber-career" target="_blank">Cybersecurity</a>, to expand my career options and acquire cloud and security skills.
+This narrative reminds aspiring developers to consider their everyday experiences as potential opportunities to apply their skills. It underscores the idea that the problems we often overlook could lead to meaningful achievements.
+
+So, finally, I did it 😏. I created a web application and solved a real-world problem.
+
+I am still waiting 🕜 for my first IT job, but I am exploring other fields, like <a href="https://www.hcoco1.com/blog/2024-02-28-cloud-computing" target="_blank">AWS</a> and <a href="https://www.hcoco1.com/blog/2024-02-18-cyber-career" target="_blank">Cybersecurity</a>, to expand my career options and acquire cloud and security skills.
 
 If you are a web development nerd (like me 🤓) and want to peek at this React app or my portfolio, follow these links:
 
