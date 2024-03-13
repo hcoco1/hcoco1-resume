@@ -12,57 +12,110 @@ heroImage: "https://images.unsplash.com/photo-1613206485381-b028e578e791?q=80&w=
 
 ---
 
-## Project: Audits Tool.
+## Project: Audits Tool 🔧
 
 ### Live App: https://audits.hcoco1.com/
 
-### Project Pitch:
+### Blog Post 😁 https://www.hcoco1.com/blog/2024-03-13-audits-tool
 
-Audits Tool is a React-based solution designed to streamline the process of storing and managing audit data in a user-friendly manner. It allows users to input audit details such as usernames, process paths, and audit descriptions, which are then saved locally and can be viewed or deleted. Additionally, the app offers a feature to generate and download comprehensive audit reports, enhancing the efficiency of audit compilation and review.
 
----
+>Audits Tool is a React-based solution designed to streamline the process of storing and managing audit data in a user-friendly manner. It allows users to input audit details such as usernames, process paths, and audit descriptions, which are then saved locally and can be viewed or deleted. Additionally, the app offers a feature to generate and download comprehensive audit reports, enhancing the efficiency of audit compilation and review.
 
-![Audits Tool](https://github.com/hcoco1/todo-list-local-storage/blob/main/audit_tool.png?raw=true)
 
 ---
 
-### Core Functionalities:
+![alt text](https://github.com/hcoco1/todo-list-local-storage/blob/main/audit_tool.png?raw=true)
 
-CRUD Operations: Implements Create, Read, Update, and Delete operations for todo items, facilitated by React's stateful components and hooks (useState for state management and useEffect for operations with side effects, such as localStorage manipulation).
+---
 
-Persistence: Utilizes the Web Storage API (localStorage) for persistence, ensuring that user data remains intact across browser sessions.
+## Core Functionalities (AI-Generated 🤖)
 
-### Technical Stack:
+## State Management with React Hooks
 
-React.js: Employs React for its component-based architecture, enabling the encapsulation of UI parts and reuse of components (e.g., TodoItem, TodoForm). React's virtual DOM ensures efficient updates and rendering of components based on state changes.
+### useState Hook
 
-CSS3: Leverages CSS for styling, applying Flexbox and Media Queries to achieve a responsive design that adapts to various screen sizes and devices.
+- Utilized for initializing and managing the component's state, enabling tracking of the todos list, new todo input fields, auditor's name, and the editing state of the auditor's name.
+- Facilitates local state management within functional components, essential for dynamically handling user inputs and application data.
 
-FontAwesome: Integrated for icons, enhancing UX with visually appealing elements for actions like delete, edit, and social media links.
+### State Initialization
 
-### Architecture and Components:
+- Initial state values for todos and auditor's name are derived from `localStorage`, showcasing a pattern for initializing state with data from external sources.
+- A function passed to `useState` fetches and parses data from `localStorage`, ensuring state synchronization with persisted data.
 
-TodoForm: A reusable form component, encapsulating input logic and submission handling. It dynamically updates the parent component's state on user interaction.
+## Side Effects with useEffect Hook
 
-TodoList and TodoItem: TodoList manages the collection of TodoItem components, each representing a task with options to edit or delete. This separation concerns aligns with React's compositional model, promoting code readability and maintainability.
+### useEffect Hook
 
-Footer with SocialMediaLink: Demonstrates composition in React, where Footer contains multiple SocialMediaLink components. Each SocialMediaLink is a reusable component configured with props for different social platforms, illustrating how props can customize component behavior and presentation.
+- Manages side effects, especially for persisting state changes to `localStorage`. Separate effects are defined for `todos` and `auditorName`, demonstrating controlled effect execution through the dependency array.
 
-### Deployment and Custom Domain Configuration:
+### Persistence Mechanism
+
+- Leverages the Web Storage API (`localStorage`) to persist the todos list and auditor's name across sessions, enhancing user experience by maintaining the application state post-browser session.
+
+## Component Composition and Reusability
+
+### Child Components
+
+- Integrates reusable child components (`TodoForm`, `TodoList`, `Footer`, `ReportGenerator`, and `AuditorNameForm`), highlighting React's component composition model for a modular and maintainable codebase.
+
+### Props and Callbacks
+
+- Interaction between `App` and child components is facilitated through props, including function props for adding, deleting, and editing todos, promoting a unidirectional data flow and decoupled parent-child communication.
+
+## Event Handling and State Updates
+
+### Form Submission
+
+- Processes new todo additions and auditor name submissions via form submission handlers, preventing default form behavior and updating the state with new data.
+
+### Editing and Deleting Todos
+
+- Implements editing and deleting todos through state updates that manipulate the todos array, adhering to the immutability principle for efficient UI re-rendering.
+
+## Localization and Date Handling
+
+### Date Formatting
+
+- Formats the current date and time to Eastern Time using `toLocaleString` when adding a new todo, addressing date handling and localization within React applications.
+
+## Deployment and Custom Domain Configuration
 
 GitHub Pages: Utilized for its simplicity in deploying static sites directly from a GitHub repository, offering a streamlined workflow for pushing updates and managing releases.
 
 Custom Subdomain Configuration: Involves setting a CNAME record in GoDaddy’s DNS settings to point the chosen subdomain (audits.hcoco1.com) to the GitHub Pages URL. This process exemplifies domain management and the integration of external DNS services with GitHub-hosted projects.
 
-### Development Best Practices:
 
-Modular Design: The app's structure encourages modularity and component reuse, reducing redundancy and facilitating scalability.
+## Directories (Project Structure)
 
-State Management: Leverages React hooks for local state management within components, providing a clear pattern for handling user input and application state.
+```bash
+tree -L 3 -I node_modules
+.
+├── CNAME
+├── LICENSE.md
+├── README.md
+├── audit_tool.png
+├── build
+├── package-lock.json
+├── package.json
+├── public
+└── src
+    ├── App.css
+    ├── App.js
+    ├── components
+    │   ├── AuditSummary.css
+    │   ├── AuditSummary.js
+    │   ├── AuditorNameForm.js
+    │   ├── Footer.js
+    │   ├── ReportGenerator.js
+    │   ├── SocialMediaLink.js
+    │   ├── TodoForm.js
+    │   ├── TodoItem.js
+    │   ├── TodoList.js
+    │   └── form_components
+    └── index.js
+```
 
-Responsive Design: Implements responsive web design principles, ensuring the app's UI is accessible and user-friendly across devices.
-
-### Future enhancements:
+## Future enhancements:
 
 - Adding authentication.
 - Adding a database.
