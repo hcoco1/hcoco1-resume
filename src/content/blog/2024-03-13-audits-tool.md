@@ -4,7 +4,7 @@ description: "Since entering the IT world (one year ago), I have read many artic
 pubDate: "Mar 13 2024"
 heroImage: "https://images.unsplash.com/photo-1611288870280-4a322b8ec7ec?auto=format&fit=crop&w=927&h=927"
 
-badge: "Life"
+badge: "Web App"
 tags: ["career","web-development"]
 ---
 
@@ -14,13 +14,13 @@ Greetings, technology enthusiasts! Today, I am delighted to present a narrative 
 
 ### Coding for Real-World Solutions
 
-Since entering the IT world (one year ago), I have read many articles and blog posts about how coding can solve real-world problems. Writing code and building an app that helps others succeed in a role or achieve a goal should be gratifying.
+<a href="https://www.hcoco1.com/blog/2023-02-01-changing-careers" target="_blank">Since entering the IT world (one year ago)</a>, I have read many articles and blog posts about how coding can solve real-world problems. Writing code and building an app that helps others succeed in a role or achieve a goal should be gratifying.
 
 Some bloggers and influencers on LinkedIn and YouTube recommend using the phrase "I want to solve real-world problems through coding" in your resume or behavioral interviews. They say that using those expressions helps you get attention from recruiters. We must consider that if we want to get our first job!
 
 ### The Reality of Coding Solutions
 
-After learning how to build full-stack applications, I  became obsessed with creating "something" to solve "something else" through coding. Initially, I found myself disheartened. I plunged into the world of coding with dreams of crafting innovative solutions, only to discover that seasoned developers had already tackled many challenges I faced. Also, artificial intelligence supports everybody in creating websites, web apps, images, logos, blog posts, essays, etc. The question that tormented me was, 'What unique contribution could I offer?' This period of introspection led me to the brink of abandoning my quest to create something meaningful through coding.
+After learning <a href="https://flatironschool.com/courses/coding-bootcamp/" target="_blank">how to build full-stack applications</a>, I  became obsessed with creating "something" to solve "something else" through coding. Initially, I found myself disheartened. I plunged into the world of coding with dreams of crafting innovative solutions, only to discover that seasoned developers had already tackled many challenges I faced. Also, artificial intelligence supports everybody in creating websites, web apps, images, logos, blog posts, essays, etc. The question that tormented me was, 'What unique contribution could I offer?' This period of introspection led me to the brink of abandoning my quest to create something meaningful through coding.
 
 ### Reevaluating My Goals
 
@@ -37,7 +37,7 @@ However, this phase of doubt was not the end but a necessary journey toward a de
 
 The phrase " I want to solve real-world problems through coding" kept appearing in my mind. I thought, "The critical point is to solve a problem or a situation, and it doesn't matter if it is a to-do list." Solving a problem using effortless tools is fascinating and something I am proud of. Thus, I shifted my focus from seeking grandiose projects to identifying and tackling real, tangible issues I encountered.
 
-After a challenging outline process, the Audits Tool was born, a project that, while seemingly modest, represented a significant milestone in my development journey. Audits Tool is a taking notes app that allows users to input audit details such as usernames, process paths, and audit descriptions, which are then saved locally and can be viewed or deleted. Additionally, the app offers a feature to generate and download comprehensive audit reports.
+After a challenging outline process, the <a href="https://audits.hcoco1.com/" target="_blank">Audits Tool</a> was born, a project that, while seemingly modest, represented a significant milestone in my development journey. Audits Tool is a taking notes app that allows users to input audit details such as usernames, process paths, and audit descriptions, which are then saved locally and can be viewed or deleted. Additionally, the app offers a feature to generate and download comprehensive audit reports.
 
 ### Pride and Progress: The Journey of the Audits Tool
 
@@ -49,7 +49,7 @@ So, finally, I did it 😏. I created a web application and solved a real-world 
 
 ### Expanding Horizons: Stepping Into AWS and Cybersecurity
 
->My journey through the development of all my projects refined my technical skills and ignited a curiosity about the landscape of technology. This exploration led me to recognize the importance of security and infrastructure, particularly in the era of cloud computing. This realization propelled me to expand my expertise in AWS and Cybersecurity to expand my career options and acquire cloud and security skills. As I continue to seek my first IT job, my incursion into these areas is more than just a diversification of skills—it's a strategic step towards becoming a well-rounded tech professional capable of addressing the multifaceted challenges of today's digital world.
+>My journey through the development of all my projects refined my technical skills and ignited a curiosity about the landscape of technology. This exploration led me to recognize the importance of security and infrastructure, particularly in the era of <a href="https://digitalcloud.training/cloud-mastery-bootcamp/?megamenu" target="_blank">cloud computing</a>. This realization propelled me to expand my expertise in <a href="https://www.hcoco1.com/blog/2024-02-28-cloud-computing" target="_blank">AWS</a> and <a href="https://www.hcoco1.com/blog/2024-02-18-cyber-career" target="_blank">Cybersecurity</a> to expand my career options and acquire cloud and security skills. As I continue to seek my first IT job, my incursion into these areas is more than just a diversification of skills—it's a strategic step towards becoming a well-rounded tech professional capable of addressing the multifaceted challenges of today's digital world.
 
 If you are a web development nerd (like me 🤓) and want to peek at this React app or my portfolio, follow these links:
 
