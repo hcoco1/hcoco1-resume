@@ -8,6 +8,17 @@ badge: "Web App"
 tags: ["career","web-development"]
 ---
 
+This audio was created using <a href="https://aws.amazon.com/polly/" target="_blank">AWS Amazon Polly</a>.
+
+<audio controls>
+  <source src="https://hcoco1-website-bucket-12345.s3.amazonaws.com/0cba8bc4-c1ad-4173-b6b8-0702c6335045.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
+Click [here](https://hcoco1-website-bucket-12345.s3.amazonaws.com/0cba8bc4-c1ad-4173-b6b8-0702c6335045.mp3) to listen to the audio if the player does not work.
+
+
+
 ### Introduction to My Coding Journey
 
 Greetings, technology enthusiasts! Today, I am delighted to present a narrative connecting programming and practical problem resolution. This blog post is for everyone interested in technology, especially those just beginning to navigate the expansive web development domain.
