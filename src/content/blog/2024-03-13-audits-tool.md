@@ -16,7 +16,7 @@ Greetings, technology enthusiasts! Today, I am delighted to present a narrative 
 
 <a href="https://www.hcoco1.com/blog/2023-02-01-changing-careers" target="_blank">Since entering the IT world (one year ago)</a>, I have read many articles and blog posts about how coding can solve real-world problems. Writing code and building an app that helps others succeed in a role or achieve a goal should be gratifying.
 
-Some bloggers and influencers on LinkedIn and YouTube recommend using the phrase "I want to solve real-world problems through coding" in your resume or behavioral interviews. They say that using those expressions helps you get attention from recruiters. We must consider that if we want to get our first job!
+Some bloggers and influencers on LinkedIn and YouTube recommend using the phrase "I want to solve real-world problems through coding" in your resume or behavioral interviews. They say that using those expressions helps you get attention from recruiters.
 
 ### The Reality of Coding Solutions
 
