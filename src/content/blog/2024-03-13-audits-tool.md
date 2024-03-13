@@ -2,12 +2,13 @@
 title:  "Finally, I did it!! I solved a real-world problem"
 description: "Since entering the IT world (one year ago 😊), I have read many articles and blog posts about ..."
 pubDate: "Mar 13 2024"
-heroImage: "https://images.unsplash.com/photo-1613206485381-b028e578e791?auto=format&fit=crop&w=927&h=927"
+heroImage: "https://images.unsplash.com/photo-1611288870280-4a322b8ec7ec?auto=format&fit=crop&w=927&h=927"
+
 badge: "Life"
 tags: ["career","web-development"]
 ---
 
-# Finally, I did it!! I solved a real-world problem.
+Greetings, technology enthusiasts! Today, I am delighted to present a narrative connecting programming and practical problem resolution. This blog post is for everybody, but especially those just beginning to navigate the expansive web development domain.
 
 Since entering the IT world (one year ago 😊), I have read many articles and blog posts about how coding can solve real-world problems. Writing code and building an app that helps others succeed in a role or achieve a goal should be gratifying.
 
@@ -35,5 +36,7 @@ After a challenging outline process, the Audits Tool 🦾 was born. It is a taki
 
 >I am still waiting 🕜 for my first IT job, but I am exploring other fields, like <a href="https://www.hcoco1.com/blog/2024-02-28-cloud-computing" target="_blank">AWS</a> and <a href="https://www.hcoco1.com/blog/2024-02-18-cyber-career" target="_blank">Cybersecurity</a>, to expand my career options and acquire cloud and security skills.
 
->>If you are a web development nerd (like me 🤓) and want to peek at this React app, follow this link:
->>- **<a href="https://www.hcoco1.com/blog/2024-03-13-audits-tool" target="_blank">Audits Tool 🦾</a>**.
+If you are a web development nerd (like me 🤓) and want to peek at this React app or my portfolio, follow these links:
+
+- **<a href="https://www.hcoco1.com/portfolio/audit-tool" target="_blank">Audits Tool 🦾</a>**.
+- **<a href="https://www.hcoco1.com/portfolio" target="_blank">Portfolio Ivan Arias 💾</a>**.
