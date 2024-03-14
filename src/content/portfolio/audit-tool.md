@@ -14,9 +14,9 @@ heroImage: "https://images.unsplash.com/photo-1613206485381-b028e578e791?q=80&w=
 
 ## Project: Audits Tool 🔧
 
-### Live App: https://audits.hcoco1.com/
+### <a href="https://audits.hcoco1.com/" target="_blank">Live App </a>
 
-### Blog Post 😁 https://www.hcoco1.com/blog/2024-03-13-audits-tool
+### <a href="https://www.hcoco1.com/blog/2024-03-13-audits-tool" target="_blank">Blog Post</a>
 
 
 >Audits Tool is a React-based solution designed to streamline the process of storing and managing audit data in a user-friendly manner. It allows users to input audit details such as usernames, process paths, and audit descriptions, which are then saved locally and can be viewed or deleted. Additionally, the app offers a feature to generate and download comprehensive audit reports, enhancing the efficiency of audit compilation and review.
