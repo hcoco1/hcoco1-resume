@@ -46,7 +46,7 @@ However, this phase of doubt was not the end but a necessary journey toward a de
 
 ### Introducing the Audits Tool: My Solution to a Real-World Problem
 
-The phrase " I want to solve real-world problems through coding" kept appearing in my mind. I thought, "The critical point is to solve a problem or a situation, and it doesn't matter if it is a to-do list." Solving a problem using effortless tools is fascinating and something I am proud of. Thus, I shifted my focus from seeking grandiose projects to identifying and tackling real, tangible issues I encountered.
+The phrase " I want to solve real-world problems through coding" kept appearing. I thought, "The critical point is to solve a problem or a situation, and it doesn't matter if it is a to-do list." Solving a problem using effortless tools is fascinating and something I am proud of. Thus, I shifted my focus from seeking grandiose projects to identifying and tackling real, tangible issues I encountered.
 
 After a challenging outline process, the <a href="https://audits.hcoco1.com/" target="_blank">Audits Tool</a> was born, a project that, while seemingly modest, represented a significant milestone in my development journey. Audits Tool is a taking notes app that allows users to input audit details such as usernames, process paths, and audit descriptions, which are then saved locally and can be viewed or deleted. Additionally, the app offers a feature to generate and download comprehensive audit reports.
 
