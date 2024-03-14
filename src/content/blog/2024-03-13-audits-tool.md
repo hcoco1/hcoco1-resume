@@ -42,7 +42,7 @@ After learning <a href="https://flatironschool.com/courses/coding-bootcamp/" tar
 
 However, this phase of doubt was not the end but a necessary journey toward a deeper understanding of my goals and capabilities. Time passed, and a circumstance at work pointed to a realization that led to a solution. One day, while walking through the warehouse at my job, I had my laptop, pocket notebook, pen, and several sheets of paper for taking notes. After engaging with and coaching several employees, I needed help remembering where I left my pen, pocket notebook, or other item. It wasn't the first time I had forgotten my belongings in various places, but it was the moment I recognized the need for a solution.
 
->This might seem trivial to some, but for me, it highlighted a gap—a personal inconvenience that I realized could be addressed through the skills I was questioning.
+>This might seem trivial to some, but it highlighted a gap, a personal inconvenience that I realized could be addressed through the skills I was questioning.
 
 ### Introducing the Audits Tool: My Solution to a Real-World Problem
 
