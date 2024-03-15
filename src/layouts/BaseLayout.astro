@@ -5,6 +5,8 @@ import Footer from "../components/Footer.astro";
 import SideBar from "../components/SideBar.astro";
 
 import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
+const TRACKING_ID = import.meta.env.PUBLIC_TRACKING_ID!;
+const gaSrc = `https://www.googletagmanager.com/gtag/js?id=${TRACKING_ID}`;
 
 const {
   image,
@@ -18,15 +20,7 @@ const {
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-DT72EQSLX6"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-DT72EQSLX6');
-</script>
     <BaseHead title={title} description={description} image={image} />
     <script is:inline>
       // This script prevents the FART effect by setting the theme before the page is rendered.
@@ -35,7 +29,7 @@ const {
       } else {
         document.documentElement.setAttribute(
           "data-theme",
-          localStorage.getItem("theme")
+          localStorage.getItem("theme"),
         );
       }
     </script>
@@ -45,6 +39,18 @@ const {
     </script>
   </head>
   <body>
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-DT72EQSLX6"
+        ></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag("js", new Date());
+    
+          gtag("config", "G-DT72EQSLX6");
+        </script>
     <div class="bg-base-100 drawer lg:drawer-open">
       <input id="my-drawer" type="checkbox" class="drawer-toggle" />
       <div class="drawer-content bg-base-100">
@@ -60,7 +66,7 @@ const {
       </div>
       {includeSidebar && <SideBar sideBarActiveItemID={sideBarActiveItemID} />}
     </div>
-   <script type="module">
+    <script type="module">
       import { themeChange } from "https://cdn.skypack.dev/theme-change";
       themeChange(true);
     </script>
