@@ -7,6 +7,15 @@ badge: "Cybersecurity Bootcamp"
 tags: ["linux","cybersecurity"]
 ---
 
+This audio was created using <a href="https://aws.amazon.com/polly/" target="_blank">AWS Amazon Polly</a>.
+
+<audio controls>
+  <source src="https://hcoco1-website-bucket-12345.s3.amazonaws.com/32c50154-41e9-4a59-b666-c8e6be6076c5.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
+Click [here](https://hcoco1-website-bucket-12345.s3.amazonaws.com/32c50154-41e9-4a59-b666-c8e6be6076c5.mp3) to listen to the audio if the player does not work.
+
 ### From Software Engineering to AWS Certified Security
 Hello there 🚀, friends! I have some exciting news to share with you all! I am thrilled to announce that I am embarking on a new adventure in cybersecurity. After completing my software engineer certification last year and enrolling in the  <a href="https://digitalcloud.training/cloud-mastery-bootcamp/?megamenu" target="_blank">Cloud Mastery Bootcamp</a> this month, I have decided to take on a new challenge and delve into this fascinating field. I can't wait to see where this journey takes me, and I hope you'll all be with me every step of the way!
 
