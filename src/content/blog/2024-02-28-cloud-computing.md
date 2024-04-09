@@ -7,7 +7,7 @@ badge: "Cloud Mastery Bootcamp"
 tags: ["aws","linux"]
 ---
 
-This audio was created using <a href="https://aws.amazon.com/polly/" target="_blank">AWS Amazon Polly</a>.
+Voiced by <a href="https://aws.amazon.com/polly/" target="_blank">Amazon Polly</a>.
 
 <audio controls>
   <source src="https://hcoco1-website-bucket-12345.s3.amazonaws.com/037be0b6-9d33-47dc-b349-9b5c3c2470ef.mp3" type="audio/mpeg">

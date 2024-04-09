@@ -7,7 +7,7 @@ badge: "Cybersecurity Bootcamp"
 tags: ["linux","cybersecurity"]
 ---
 
-This audio was created using <a href="https://aws.amazon.com/polly/" target="_blank">AWS Amazon Polly</a>.
+Voiced by <a href="https://aws.amazon.com/polly/" target="_blank">Amazon Polly</a>.
 
 <audio controls>
   <source src="https://hcoco1-website-bucket-12345.s3.amazonaws.com/32c50154-41e9-4a59-b666-c8e6be6076c5.mp3" type="audio/mpeg">
