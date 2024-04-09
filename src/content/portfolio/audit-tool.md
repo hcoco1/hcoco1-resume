@@ -2,7 +2,7 @@
 title: "Audits Tool"
 description: "Audits Tool is a React-based solution designed to streamline the process of storing and managing audit data in a user-friendly manner."
 custom_link_label: "Live App"
-custom_link: "https://audits.hcoco1.com/"
+custom_link: "https://www.audits.hcoco1.com/"
 updatedDate: "March 6 2024"
 pricing: "Web App"
 badge: "New"
@@ -14,7 +14,7 @@ heroImage: "https://images.unsplash.com/photo-1613206485381-b028e578e791?q=80&w=
 
 ## Project: Audits Tool 🔧
 
-### <a href="https://audits.hcoco1.com/" target="_blank">Live App </a>
+### <a href="https://www.audits.hcoco1.com/" target="_blank">Live App </a>
 
 ### <a href="https://www.hcoco1.com/blog/2024-03-13-audits-tool" target="_blank">Blog Post</a>
 
