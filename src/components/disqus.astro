@@ -1,3 +1,41 @@
+---
+import { useEffect } from 'react';
+
+// Replace with your Disqus shortname
+const disqusShortname = 'hcoco2';
+
+useEffect(() => {
+  const loadDisqus = () => {
+    if (!window.DISQUS) {
+      const d = document;
+      const s = d.createElement('script');
+      s.src = `https://hcoco2.disqus.com/embed.js`; // Replace with the correct path to embed.js
+      s.setAttribute('data-timestamp', String(+new Date()));
+      (d.head || d.body).appendChild(s);
+    } else {
+      window.DISQUS.reset({ reload: true });
+    }
+  };
+
+  loadDisqus();
+
+  // Cleanup if needed
+  return () => {
+    if (window.DISQUS) {
+      window.DISQUS.reset({ reload: false });
+    }
+  };
+}, []);
+---
+
+<div id="disqus_thread"></div>
+
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+
+
 <div id="disqus_thread"></div>
 
 <script is:inline>

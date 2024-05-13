@@ -3,6 +3,7 @@ import BaseHead from "../components/BaseHead.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import SideBar from "../components/SideBar.astro";
+import Disqus from '../components/disqus.astro';
 
 import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
 const TRACKING_ID = import.meta.env.PUBLIC_TRACKING_ID!;
@@ -62,6 +63,7 @@ const {
             <slot />
           </main>
         </div>
+        <Disqus />
         <Footer />
       </div>
       {includeSidebar && <SideBar sideBarActiveItemID={sideBarActiveItemID} />}
