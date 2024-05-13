@@ -3,7 +3,7 @@ title:  "Finally, I did it!! I solved a real-world problem"
 description: "Since entering the IT world (one year ago), I have read many articles and blog posts about ..."
 pubDate: "Mar 13 2024"
 heroImage: "https://images.unsplash.com/photo-1611288870280-4a322b8ec7ec?auto=format&fit=crop&w=927&h=927"
-
+Comments: True
 badge: "Web App"
 tags: ["career","web-development"]
 ---
@@ -67,3 +67,24 @@ If you are a web development nerd (like me 🤓) and want to peek at this React 
 - **<a href="https://www.hcoco1.com/portfolio/audit-tool" target="_blank">Audits Tool 🦾</a>**
 
 - **<a href="https://www.hcoco1.com/portfolio" target="_blank">Portfolio Ivan Arias 💾</a>**
+
+
+<div id="disqus_thread"></div>
+<script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://hcoco1-1.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
