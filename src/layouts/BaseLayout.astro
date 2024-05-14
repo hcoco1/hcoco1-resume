@@ -3,7 +3,6 @@ import BaseHead from "../components/BaseHead.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import SideBar from "../components/SideBar.astro";
-import Disqus from '../components/disqus.astro';
 
 import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
 const TRACKING_ID = import.meta.env.PUBLIC_TRACKING_ID!;
@@ -21,7 +20,6 @@ const {
 <!doctype html>
 <html lang="en">
   <head>
-
     <BaseHead title={title} description={description} image={image} />
     <script is:inline>
       // This script prevents the FART effect by setting the theme before the page is rendered.
@@ -40,18 +38,18 @@ const {
     </script>
   </head>
   <body>
-        <!-- Google tag (gtag.js) -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-DT72EQSLX6"
-        ></script>
-        <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag() {
-            dataLayer.push(arguments);
-          }
-          gtag("js", new Date());
-    
-          gtag("config", "TRACKING_ID");
-        </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DT72EQSLX6"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "TRACKING_ID");
+    </script>
     <div class="bg-base-100 drawer lg:drawer-open">
       <input id="my-drawer" type="checkbox" class="drawer-toggle" />
       <div class="drawer-content bg-base-100">
@@ -63,7 +61,7 @@ const {
             <slot />
           </main>
         </div>
-        <Disqus />
+
         <Footer />
       </div>
       {includeSidebar && <SideBar sideBarActiveItemID={sideBarActiveItemID} />}
