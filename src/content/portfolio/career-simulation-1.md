@@ -5,7 +5,7 @@ custom_link_label: "Live Report"
 custom_link: "https://hcoco1.github.io/Career-Simulation-1/"
 updatedDate: "February 18 2024"
 pricing: "Cybersecurity Report"
-badge: "New"
+
 oldPricing: "https://github.com/hcoco1/Career-Simulation-1"
 heroImage: "https://images.unsplash.com/photo-1548092372-0d1bd40894a3?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
 
