@@ -2,7 +2,7 @@
 title: "Real Estate Site"
 description: "Real Estate Site (RES) is a REACT/REACT-BOOTSTRAP/REACT-ROUTER app that accesses data from a web database."
 custom_link_label: "Live App"
-custom_link: "https://phase2app.vercel.app/"
+custom_link: "https://phase2app.onrender.com"
 updatedDate: "Jul 1 2023"
 pricing: "Web App"
 oldPricing: "https://github.com/hcoco1/phase2app"
