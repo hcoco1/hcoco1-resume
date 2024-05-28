@@ -2,7 +2,7 @@
 title: "Students' Grades Dashboard"
 description: "This project creates an interactive dashboard to visualize and analyze the grades of high school students over time...."
 custom_link_label: "Live App"
-custom_link: "https://dashcoco1.onrender.com/"
+custom_link: "https://www.dashboard.hcoco1.com/"
 updatedDate: "May 22 2024"
 pricing: "Web App"
 badge: "New"
