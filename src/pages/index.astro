@@ -8,6 +8,12 @@ const posts = (await getCollection("blog")).sort(
 );
 
 const last_posts = posts.slice(0, 3);
+
+const projects = (await getCollection("portfolio")).sort(
+  (a, b) => b.data.updatedDate.valueOf() - a.data.updatedDate.valueOf(),
+);
+
+const last_projects = projects.slice(0, 3);
 ---
 
 <BaseLayout sideBarActiveItemID="home">
@@ -43,9 +49,25 @@ const last_posts = posts.slice(0, 3);
     <div class="text-3xl w-full font-bold mb-2">Lastest projects {"</>"}</div>
   </div>
 
+  {
+    last_projects.map((item) => (
+      <>
+        <HorizontalCard
+          title={item.data.title}
+          img={item.data.heroImage}
+          desc={item.data.description}
+          url={"/portfolio/" + item.slug}
+          target="_self"
+          badge={item.data.badge}
+        />
+        <div class="divider my-0" />
+      </>
+    ))
+  }
 
-  <HorizontalCard
-    title="Students' Grades Dashboard"
+
+<!--   <HorizontalCard
+    title="Student Performance Dashboard"
     img="https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=2132&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     desc="This project creates an interactive dashboard to visualize and analyze the grades of high school students over time...."
     url="/portfolio/students-dashboard"
@@ -68,7 +90,7 @@ const last_posts = posts.slice(0, 3);
     url="/portfolio/career-simulation-3"
     badge="Cybersecurity"
     
-  />
+  /> -->
   <div class="divider my-0"></div>
 
 
