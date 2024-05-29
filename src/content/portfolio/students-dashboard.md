@@ -17,6 +17,10 @@ heroImage: "https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=
 This project creates an interactive dashboard to visualize and analyze the grades of high school students over time. The dashboard is built using Python, Dash, and Plotly, with Bootstrap for styling.
 
 ## Notice:
+
+- Username: hcoco1
+- Password: Y6wThNG^F\
+
 - This app is hosted on a free web service, which may introduce a delay (50 seconds or more) in responding to the first request after a period of inactivity while the instance spins up.
 
 - This dashboard is designed for both English and Spanish speakers and is currently being translated.
