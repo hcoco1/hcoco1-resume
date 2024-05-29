@@ -1,5 +1,5 @@
 ---
-title: "Students' Grades Dashboard"
+title: "Student Performance Dashboard"
 description: "This project creates an interactive dashboard to visualize and analyze the grades of high school students over time...."
 custom_link_label: "Live App"
 custom_link: "https://www.dashboard.hcoco1.com/"
@@ -12,7 +12,6 @@ heroImage: "https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=
 
 ---
 
-## Project: Students' Grades Dashboard
 
 This project creates an interactive dashboard to visualize and analyze the grades of high school students over time. The dashboard is built using Python, Dash, and Plotly, with Bootstrap for styling.
 
