@@ -2,7 +2,7 @@
 title: "Student Performance Dashboard"
 description: "This project creates an interactive dashboard to visualize and analyze the grades of high school students over time...."
 custom_link_label: "Live App"
-custom_link: "https://www.dashboard.hcoco1.com/"
+custom_link: "https://hcoco1.pythonanywhere.com/"
 updatedDate: "May 22 2024"
 pricing: "Web App"
 badge: "#python #dash #plotly"
@@ -17,10 +17,8 @@ This project creates an interactive dashboard to visualize and analyze the grade
 
 ## Notice:
 
-- Username: hcoco1
-- Password: Y6wThNG^F\
-
-- This app is hosted on a free web service, which may introduce a delay (50 seconds or more) in responding to the first request after a period of inactivity while the instance spins up.
+- Username: **hcoco1**
+- Password: **pythonpython**
 
 - This dashboard is designed for both English and Spanish speakers and is currently being translated.
 
@@ -32,6 +30,11 @@ This project creates an interactive dashboard to visualize and analyze the grade
 - **Grade Average**: See the average grade for each student.
 - **Detailed Exam Scores**: Examine scores for individual exams.
 - **Performance Over Time**: Visualize performance trends across multiple exams.
+
+
+
+<iframe width="800" height="450" src="https://www.youtube.com/embed/Iw42U5wybu8?si=2qbxfwWVzjAYYjv_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 
 ## Installation
 
