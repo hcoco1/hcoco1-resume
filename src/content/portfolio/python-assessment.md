@@ -4,7 +4,7 @@ description: "While applying and interviewing for cybersecurity careers, you may
 custom_link_label: "Live Report"
 custom_link: "https://hcoco1.github.io/Python-Assessment/"
 updatedDate: "March 31 2024"
-pricing: "Cybersecurity Assessment"
+pricing: "Cybersecurity"
 
 oldPricing: "https://github.com/hcoco1/Python-Assessment"
 heroImage: "https://images.unsplash.com/photo-1538439907460-1596cafd4eff?q=80&w=2056&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
