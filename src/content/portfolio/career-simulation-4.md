@@ -7,16 +7,22 @@ updatedDate: "Jul 3 2024"
 pricing: "Cybersecurity"
 
 oldPricing: "https://github.com/hcoco1/Career-Simulation-4"
-heroImage: "https://images.unsplash.com/photo-1541728472741-03e45a58cf88?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+heroImage: "https://raw.githubusercontent.com/hcoco1/Career-Simulation-4/main/docs/images/vulnerability%20.webp"
 
 
 ---
 ## Hacking Mr. Robot Virtual Machine  ☠️
 ---
 
-"Penetration testing is like a security checkup for computer systems. Testers simulate hacker activities to identify and fix vulnerabilities before real hackers can exploit them. This project will conduct a thorough web penetration test using the Mr. Robot Virtual Machine, which simulates realistic web vulnerabilities in a safe environment—allowing for exploring and documenting potential security flaws without affecting real systems.
+This report presents a structured methodology for ethical hacking and securing systems, specifically focusing on a vulnerable Vulnhub Virtual Machine called Mr. Robot, which hosts a WordPress site.
 
-Every step, finding, and the overall result will be carefully documented throughout the process. This website will present a detailed account of the methodology and outcomes of the penetration testing journey, offering insight into how security assessments are carried out and highlighting the importance of regular security maintenance in preventing cyber attacks."
+The process begins by creating a controlled, isolated environment to ensure safe testing without affecting live systems. Network scanning tools like Nmap identify live hosts, open ports, and available services, providing a detailed map of the target network.
+
+The next phase involves enumeration, utilizing tools such as Gobuster and Wappalyzer to brute-force directories and identify technologies used by the target WordPress site. This information is crucial for understanding the target's infrastructure. Vulnerabilities are then identified using Nmap scripts and Nikto, which scan for outdated software like old versions of WordPress and potential security issues such as SQL injection or cross-site scripting in web servers.
+
+Brute-force attacks use Python scripts and Hydra to guess login credentials and identify weak passwords and access points. Finally, the guide explains how to achieve a reverse shell using a PHP script or Metasploit, enabling control over the target system.
+
+>In short, the guide underlines the importance of ethical hacking and responsible disclosure. It stresses that penetration testing is vital for improving security and maintaining secure systems when conducted ethically and with responsible disclosure. Responsible disclosure is a guideline and a commitment to the community and protecting the systems we test. This commitment makes the work of a penetration tester genuinely impactful.
 
    <video width="720" height="640" controls>
   <source src="https://hcoco1-website-bucket-12345.s3.amazonaws.com/Penetration+Testi+2024-06-26.mp4" type="video/mp4">
