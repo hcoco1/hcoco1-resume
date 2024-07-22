@@ -5,7 +5,7 @@ pubDate: "Mar 13 2024"
 heroImage: "https://images.unsplash.com/photo-1611288870280-4a322b8ec7ec?auto=format&fit=crop&w=927&h=927"
 Comments: True
 badge: "Web App"
-tags: ["career","web-development"]
+tags: ["web-development"]
 ---
 
 Voiced by <a href="https://aws.amazon.com/polly/" target="_blank">Amazon Polly</a>.
