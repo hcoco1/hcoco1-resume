@@ -4,9 +4,9 @@ description: "Audits Tool is a React-based solution designed to streamline the p
 custom_link_label: "Live App"
 custom_link: "https://www.audits.hcoco1.com/"
 updatedDate: "March 6 2024"
-pricing: "Web App"
+category: "Web App"
 
-oldPricing: "https://github.com/hcoco1/todo-list-local-storage"
+repository: "https://github.com/hcoco1/todo-list-local-storage"
 heroImage: "https://images.unsplash.com/photo-1613206485381-b028e578e791?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
 
 

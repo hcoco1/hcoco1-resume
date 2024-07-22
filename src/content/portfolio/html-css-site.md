@@ -4,8 +4,8 @@ description: "This website was created using plain HTML and CSS, serving as my i
 custom_link_label: "Live App"
 custom_link: "https://hcoco1.github.io/hcoco1-website/"
 updatedDate: "Sep 1 2022"
-pricing: "Web Site"
-oldPricing: "https://github.com/hcoco1/hcoco1-website"
+category: "Web Site"
+repository: "https://github.com/hcoco1/hcoco1-website"
 
 checkoutUrl: ""
 heroImage: "https://tatuking.com/wp-content/uploads/2020/06/html-css3.jpg"

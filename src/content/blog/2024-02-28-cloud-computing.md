@@ -3,7 +3,7 @@ title:  "My Cloud Computing Journey"
 description: "After graduating with a certification as a Software Engineer, I started exploring other fields like cybersecurity and cloud computing...."
 pubDate: "Feb 28 2024"
 heroImage: "https://images.unsplash.com/photo-1667984390538-3dea7a3fe33d?auto=format&fit=crop&w=927&h=927"
-badge: "Cloud Mastery Bootcamp"
+badge: "AWS"
 tags: ["aws","linux"]
 ---
 

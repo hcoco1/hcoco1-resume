@@ -4,8 +4,8 @@ description: "Real Estate Site (RES) is a REACT/REACT-BOOTSTRAP/REACT-ROUTER app
 custom_link_label: "Live App"
 custom_link: "https://phase2app.onrender.com"
 updatedDate: "Jul 1 2023"
-pricing: "Web App"
-oldPricing: "https://github.com/hcoco1/phase2app"
+category: "Web App"
+repository: "https://github.com/hcoco1/phase2app"
 
 checkoutUrl: "https://youtu.be/gTGiYxPJ-Dk"
 heroImage: "https://a57.foxnews.com/static.foxbusiness.com/foxbusiness.com/content/uploads/2023/03/931/506/FLORIDA-REAL-ESTATE-HOME-SALE-GETTY.jpg?ve=1&tl=1"

@@ -4,8 +4,8 @@ description: "My blog site is a Jekyll static site whose purpose is to share my 
 custom_link_label: "Live App"
 custom_link: "https://www.hcoco1.blog/"
 updatedDate: "Sep 1 2023"
-pricing: "Web Site"
-oldPricing: "https://github.com/hcoco1/blog-hcoco1"
+category: "Web Site"
+repository: "https://github.com/hcoco1/blog-hcoco1"
 checkoutUrl: ""
 heroImage: "https://srinathh.github.io/assets/images/generic/jekyll-logo-dark-solid.png"
 ---

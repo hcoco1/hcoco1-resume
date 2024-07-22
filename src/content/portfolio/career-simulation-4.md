@@ -4,9 +4,9 @@ description: "Hacking Mr. Robot Virtual Machine"
 custom_link_label: "Live Report"
 custom_link: "https://hcoco1.github.io/Career-Simulation-4/"
 updatedDate: "Jul 3 2024"
-pricing: "Cybersecurity"
+category: "Cybersecurity"
 
-oldPricing: "https://github.com/hcoco1/Career-Simulation-4"
+repository: "https://github.com/hcoco1/Career-Simulation-4"
 heroImage: "https://raw.githubusercontent.com/hcoco1/Career-Simulation-4/main/docs/images/vulnerability%20.webp"
 
 

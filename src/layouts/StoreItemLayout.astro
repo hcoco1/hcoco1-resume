@@ -11,8 +11,8 @@ const {
   description,
   updatedDate,
   heroImage,
-  pricing,
-  oldPricing,
+  category,
+  repository,
   checkoutUrl,
   badge,
   custom_link,
@@ -29,7 +29,14 @@ import { Image } from "astro:assets";
     <article class="prose prose-lg max-w-[750px] prose-img:mx-auto">
       {
         heroImage && (
-          <Image width={750} height={422} format="webp" src={heroImage} alt={title} class="w-full mb-6" />
+          <Image
+            width={750}
+            height={422}
+            format="webp"
+            src={heroImage}
+            alt={title}
+            class="w-full mb-6"
+          />
         )
       }
       <div class="">
@@ -39,31 +46,37 @@ import { Image } from "astro:assets";
         </h1>
         <div class="flex place-content-between items-center">
           <div class="grow md:grow-0">
-            <span class="badge badge-info mr-1"> {pricing}</span>
-            
+            <span class="badge badge-info mr-1"> {category}</span>
           </div>
           <div>
             {
               custom_link && (
-                <a class="btn btn-outline grow md:grow-0 ml-4" href={custom_link} target="_blank">
+                <a
+                  class="btn btn-outline grow md:grow-0 ml-4"
+                  href={custom_link}
+                  target="_blank"
+                >
                   {custom_link_label}
                 </a>
               )
             }
-            {checkoutUrl && (
-              <a class="btn btn-outline grow md:grow-0 ml-4" href={checkoutUrl} target="_blank">
-                Demo
-              </a>
-            )
-
+            {
+              checkoutUrl && (
+                <a
+                  class="btn btn-outline grow md:grow-0 ml-4"
+                  href={checkoutUrl}
+                  target="_blank"
+                >
+                  Demo
+                </a>
+              )
             }
-            
 
-
-
-
-
-            <a class="btn btn-outline grow md:grow-0 ml-4" href={oldPricing} target="_blank">GitHub</a>
+            <a
+              class="btn btn-outline grow md:grow-0 ml-4"
+              href={repository}
+              target="_blank">GitHub</a
+            >
           </div>
         </div>
       </div>

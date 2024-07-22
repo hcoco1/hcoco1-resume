@@ -5,8 +5,8 @@ const {
   desc,
   url,
   badge,
-  pricing,
-  oldPricing,
+  category,
+  repository,
   checkoutUrl,
   details = true,
   custom_link = false,
@@ -36,7 +36,7 @@ import { Image } from "astro:assets";
           {badge && <div class="badge badge-secondary mx-2">{badge}</div>}
         </h1>
         <div>
-          <span class="badge badge-info mr-1"> {pricing}</span>
+          <span class="badge badge-info mr-1"> {category}</span>
           
         </div>
         <p class="py-1 text-1xl">{desc}</p>

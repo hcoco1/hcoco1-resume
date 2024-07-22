@@ -4,9 +4,9 @@ description: "This project creates an interactive dashboard to visualize and ana
 custom_link_label: "Live App"
 custom_link: "https://hcoco1.pythonanywhere.com/"
 updatedDate: "May 22 2024"
-pricing: "Web App"
+category: "Web App"
 
-oldPricing: "https://github.com/hcoco1/hcoco1-dashboard"
+repository: "https://github.com/hcoco1/hcoco1-dashboard"
 heroImage: "https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=2132&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
 
 

@@ -4,8 +4,8 @@ description: "World Population Dashboard is an HTML/CSS/JS app that accesses dat
 custom_link_label: "Live App"
 custom_link: "https://hcoco1.github.io/Phase1_app/"
 updatedDate: "May 1 2023"
-pricing: "Web App"
-oldPricing: "https://github.com/hcoco1/Phase1_app"
+category: "Web App"
+repository: "https://github.com/hcoco1/Phase1_app"
 
 checkoutUrl: "https://youtu.be/w_4ZAicscw4"
 heroImage: "https://i.ebayimg.com/images/g/RBwAAOSwsv5cg8lp/s-l1600.jpg"

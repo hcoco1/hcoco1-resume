@@ -3,7 +3,7 @@ title: "Exploring the Cyber Seas"
 description: "Hey there, everyone! I'm super excited to kick off my adventure into cybersecurity...."
 pubDate: "Feb 18 2024"
 heroImage: "https://images.unsplash.com/photo-1660644807804-ffacfd7a4137?auto=format&fit=crop&w=927&h=927"
-badge: "Cybersecurity Bootcamp"
+badge: "Cybersecurity"
 tags: ["linux","cybersecurity"]
 ---
 
