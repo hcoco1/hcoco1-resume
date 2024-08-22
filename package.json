@@ -21,7 +21,7 @@
     "@react-icons/all-files": "^4.1.0",
     "@types/react": "^18.2.39",
     "@types/react-dom": "^18.2.17",
-    "astro": "^3.6.3",
+    "astro": "^3.6.5",
     "astro-icon": "^0.8.1",
     "dayjs": "^1.11.10",
     "react": "^18.2.0",
