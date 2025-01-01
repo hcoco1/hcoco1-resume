@@ -10,8 +10,8 @@ tags: ["web-development"]
 
 Voiced by <a href="https://aws.amazon.com/polly/" target="_blank">Amazon Polly</a>.
 
-<audio controls>
-  <source src="https://hcoco1-website-bucket-12345.s3.amazonaws.com/91928470-aaa4-4021-a667-078cd3504503.mp3" type="audio/mpeg">
+  <audio controls>
+  <source src="https://raw.github.com/hcoco1/audio-host/main/91928470-aaa4-4021-a667-078cd3504503.mp3" type="audio/mpeg">
   Your browser does not support the audio element.
 </audio>
 

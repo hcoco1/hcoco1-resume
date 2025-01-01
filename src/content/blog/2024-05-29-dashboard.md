@@ -19,7 +19,7 @@ tags: ["dashboard","plotly-dash", "python"]
 <section id="englishContent" style="display: block;">
   <h3>Voiced by <a href="https://aws.amazon.com/polly/" target="_blank">Amazon Polly</a></h3>
   <audio controls>
-  <source src="https://hcoco1-website-bucket-12345.s3.amazonaws.com/293da747-bfd8-4f42-b879-ba66f8603d19.mp3" type="audio/mpeg">
+  <source src="https://raw.github.com/hcoco1/audio-host/main/293da747-bfd8-4f42-b879-ba66f8603d19.mp3" type="audio/mpeg">
   Your browser does not support the audio element.
 </audio>
   
@@ -77,8 +77,9 @@ tags: ["dashboard","plotly-dash", "python"]
 
 <section id="spanishContent" style="display: none;">
   <h3>Voiced by <a href="https://aws.amazon.com/polly/" target="_blank">Amazon Polly</a></h3>
+
   <audio controls>
-  <source src="https://hcoco1-website-bucket-12345.s3.amazonaws.com/d78d29e6-8307-41a9-8c40-3b609d49cedd.mp3" type="audio/mpeg">
+  <source src="https://raw.github.com/hcoco1/audio-host/main/d78d29e6-8307-41a9-8c40-3b609d49cedd.mp3" type="audio/mpeg">
   Your browser does not support the audio element.
 </audio>
 

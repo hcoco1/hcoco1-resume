@@ -9,8 +9,8 @@ tags: ["linux","cybersecurity"]
 
 Voiced by <a href="https://aws.amazon.com/polly/" target="_blank">Amazon Polly</a>.
 
-<audio controls>
-  <source src="https://hcoco1-website-bucket-12345.s3.amazonaws.com/32c50154-41e9-4a59-b666-c8e6be6076c5.mp3" type="audio/mpeg">
+  <audio controls>
+  <source src="https://raw.github.com/hcoco1/audio-host/main/32c50154-41e9-4a59-b666-c8e6be6076c5.mp3" type="audio/mpeg">
   Your browser does not support the audio element.
 </audio>
 
