@@ -12,6 +12,7 @@ heroImage: "https://raw.githubusercontent.com/hcoco1/Career-Simulation-4/main/do
 
 ---
 ## Hacking Mr. Robot Virtual Machine  ☠️
+
 ---
 
 This report presents a structured methodology for ethical hacking and securing systems, specifically focusing on a vulnerable Vulnhub Virtual Machine called Mr. Robot, which hosts a WordPress site.
@@ -24,7 +25,4 @@ Brute-force attacks use Python scripts and Hydra to guess login credentials and 
 
 >In short, the guide underlines the importance of ethical hacking and responsible disclosure. It stresses that penetration testing is vital for improving security and maintaining secure systems when conducted ethically and with responsible disclosure. Responsible disclosure is a guideline and a commitment to the community and protecting the systems we test. This commitment makes the work of a penetration tester genuinely impactful.
 
-   <video width="720" height="640" controls>
-  <source src="https://hcoco1-website-bucket-12345.s3.amazonaws.com/Penetration+Testi+2024-06-26.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/h_1kdILmgIE?si=TrA4vx9DwCsQu698" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
