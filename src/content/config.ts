@@ -18,6 +18,7 @@ const storeSchema = z.object({
     custom_link: z.string().optional(),
     updatedDate: z.coerce.date(),
     category: z.string().optional(),
+    repository_label: z.string().optional(),
     repository: z.string().optional(),
     badge: z.string().optional(),
     checkoutUrl: z.string().optional(),

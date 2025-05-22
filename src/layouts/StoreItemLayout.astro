@@ -13,6 +13,7 @@ const {
   heroImage,
   category,
   repository,
+  repository_label,
   checkoutUrl,
   badge,
   custom_link,
@@ -72,11 +73,17 @@ import { Image } from "astro:assets";
               )
             }
 
-            <a
-              class="btn btn-outline grow md:grow-0 ml-4"
-              href={repository}
-              target="_blank">GitHub</a
-            >
+            {
+              repository && (
+                <a
+                  class="btn btn-outline grow md:grow-0 ml-4"
+                  href={repository}
+                  target="_blank"
+                >
+                  {repository_label ?? "GitHub"}
+                </a>
+              )
+            }
           </div>
         </div>
       </div>
