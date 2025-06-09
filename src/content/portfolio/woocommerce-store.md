@@ -6,7 +6,7 @@ custom_link: "https://soluciones-e-commerce-co-6dlu62j.gamma.site/"
 updatedDate: "May 22 2025"
 category: "WooCommerce"
 repository_label: "Live Store"
-repository: "https://ivanarias.com/"
+repository: "https://store.ivanarias.com/"
 heroImage: "https://images.unsplash.com/photo-1649180566282-9a7f37782f74?q=80&w=1724&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
 
 
