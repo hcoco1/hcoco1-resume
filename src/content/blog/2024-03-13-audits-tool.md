@@ -2,7 +2,7 @@
 title:  "Finally, I did it!! I solved a real-world problem"
 description: "Since entering the IT world (one year ago), I have read many articles and blog posts about ..."
 pubDate: "Mar 13 2024"
-heroImage: "https://images.unsplash.com/photo-1611288870280-4a322b8ec7ec?auto=format&fit=crop&w=927&h=927"
+heroImage: "https://images.unsplash.com/photo-1503789146722-cf137a3c0fea?q=80&w=500&h=300&fit=crop&auto=format&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
 Comments: True
 badge: "Web App"
 tags: ["web-development"]
