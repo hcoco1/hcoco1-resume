@@ -3,215 +3,185 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import TimeLineElement from "../components/cv/TimeLine.astro";
 ---
 
+<style>
+  .section-title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    border-left: 4px solid #3b82f6;
+    padding-left: 10px;
+  }
+
+  .card {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease;
+  }
+
+  .card:hover {
+    transform: translateY(-3px);
+  }
+
+  .profile {
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    color: #e2e8f0;
+    padding: 25px;
+    border-radius: 12px;
+  }
+
+  .highlight {
+    color: #38bdf8;
+    font-weight: 600;
+  }
+
+  ul li {
+    margin-bottom: 6px;
+  }
+</style>
+
 <BaseLayout title="Resume" sideBarActiveItemID="cv">
-  <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Profile 📜</div>
+
+  <!-- PROFILE -->
+  <div class="mb-10 profile">
+    <div class="text-3xl font-bold mb-3">Ivan Arias</div>
+    <div class="text-lg mb-3">
+      <span class="highlight">Junior GIS Developer</span> | Web GIS • Python • AWS
+    </div>
+
+    <p class="text-justify">
+      Geological engineer with 13+ years of experience in geospatial analysis and subsurface data interpretation,
+      transitioning into Web GIS development. Experienced with <span class="highlight">ArcGIS</span>, spatial data modeling,
+      and modern technologies including Python, cloud systems, and web applications.
+      <br><br>
+      Currently focused on building scalable GIS applications and data-driven solutions.
+    </p>
   </div>
 
-  <div class="mb-10 text-justify">
-    <strong>Entry-Level DevOps & Cloud Security | AWS • Python • Linux </strong>
+  <!-- EDUCATION -->
+  <div class="mb-10">
+    <div class="section-title">Education</div>
+
+    <div class="grid gap-4">
+      <div class="card">
+        <strong>Cloud Mastery Bootcamp</strong><br>
+        <span>2024 – Digital Cloud Training</span>
+      </div>
+
+      <div class="card">
+        <strong>Cybersecurity Bootcamp</strong><br>
+        <span>2024 – Fullstack Academy</span>
+      </div>
+
+      <div class="card">
+        <strong>Full Stack Engineering</strong><br>
+        <span>2023 – Flatiron School</span>
+      </div>
+
+      <div class="card">
+        <strong>Geological Engineering</strong><br>
+        <span>Central University of Venezuela</span>
+      </div>
+    </div>
   </div>
 
-<!--   <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Elevator Pitch (AI-voiced)</div>
+  <!-- EXPERIENCE -->
+  <div class="mb-10">
+    <div class="section-title">Experience</div>
+
+    <div class="grid gap-4">
+
+      <div class="card">
+        <strong>Sortation Associate – Amazon</strong>
+        <p class="text-sm text-gray-500">2020 – 2025</p>
+
+        <ul>
+          <li>Processed 2,000+ records daily with 90%+ accuracy</li>
+          <li>Improved workflow efficiency by 10%</li>
+          <li>Worked with automated logistics and tracking systems</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <strong>General Laborer – Self-employed</strong>
+        <p class="text-sm text-gray-500">2019 – 2020</p>
+
+        <ul>
+          <li>Delivered services to 20+ clients with high satisfaction</li>
+          <li>Optimized workflows and reduced project time by 15%</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <strong>Geology Technician / GIS Analysis – PDVSA</strong>
+        <p class="text-sm text-gray-500">2005 – 2019</p>
+
+        <ul>
+          <li>Performed GIS analysis using <span class="highlight">ArcGIS</span></li>
+          <li>Integrated well logs and seismic data for modeling</li>
+          <li>Improved reservoir prediction accuracy by 30%</li>
+          <li>Worked with Petrel and OpenWorks</li>
+        </ul>
+      </div>
+
+    </div>
   </div>
 
-  <div class="mb-5">
-    <iframe
-      width="360"
-      height="640"
-      src="https://www.youtube.com/embed/6mBQVktCoxM?si=QWinQWPHEnHKjJKe"
-      title="YouTube video player"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      referrerpolicy="strict-origin-when-cross-origin"
-      allowfullscreen></iframe>
-  </div> -->
+  <!-- PROJECTS -->
+  <div class="mb-10">
+    <div class="section-title">Projects</div>
 
-  <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Education</div>
+    <div class="grid gap-4">
+      <div class="card">
+        <strong>Web GIS Application</strong>
+        <p>Built interactive maps using React, Flask, and GeoJSON.</p>
+      </div>
+
+      <div class="card">
+        <strong>AWS Infrastructure</strong>
+        <p>Deployed scalable cloud environments using Terraform.</p>
+      </div>
+
+      <div class="card">
+        <strong>Python Data Tools</strong>
+        <p>Automated data processing and transformation workflows.</p>
+      </div>
+
+      <div class="card">
+        <strong>Raspberry Pi NAS</strong>
+        <p>Configured a personal server for storage and networking.</p>
+      </div>
+    </div>
   </div>
 
-  <div class="time-line-container grid gap-4 mb-10">
-<!--     <TimeLineElement
-      title="KubeCraft Career Accelerator"
-      subtitle="Jun 2025 to Present at KubeCraft, online, Netherlands."
-    /> -->
+  <!-- SKILLS -->
+  <div class="mb-10">
+    <div class="section-title">Skills</div>
 
-    <TimeLineElement
-      title="Cloud Mastery Bootcamp"
-      subtitle="Feb 2024 to Oct 2024 at Digital Cloud Training, online, USA."
-    />
-
-    <TimeLineElement
-      title="Fullstack Academy Cyber Bootcamp"
-      subtitle="Jan 2024 to Jul 2024 at Full Stack Academy, online, USA."
-    />
-    <TimeLineElement
-      title="Full Stack Engineering"
-      subtitle="Feb 2023 to Oct 2023 at Flatiron School, online, USA."
-    />
-    <TimeLineElement
-      title="Geological Engineering degree"
-      subtitle="1999 to 2004 at Central University of Venezuela, Caracas, Venezuela"
-    />
-  </div>
-
-  <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Experience</div>
-  </div>
-
-  <div class="time-line-container mb-10">
-   <!--  <TimeLineElement
-      title="DevOps Assistant"
-      subtitle="From Jun 2025 to Present at KubeCraft, online"
-    >
-    
-      <p>
-        Actively participating in <strong>KubeCraft's hands-on DevOps internship</strong>
-        program, focused on building production-ready skills through real-world
-        labs, coaching, and project execution. Current focus includes:
-      </p>
-
-      <ul>
-        <li><strong>- Linux system administration</strong></li>
-        <li><strong>- Kubernetes fundamentals and homelab deployment</strong></li>
-        <li><strong>- CI/CD pipelines (GitHub Actions, Azure DevOps)</strong></li>
-        <li><strong>- Infrastructure as Code (Terraform)</strong></li>
-        <li><strong>- Monitoring and Observability basics</strong></li>
-        <li><strong>- Personal branding and job search strategy</strong></li>
+    <div class="card">
+      <ul class="columns-2">
+        <li><strong>GIS:</strong> ArcGIS, Spatial Analysis</li>
+        <li><strong>Programming:</strong> Python, JavaScript, SQL</li>
+        <li><strong>Web:</strong> React, Flask</li>
+        <li><strong>Cloud:</strong> AWS, Terraform</li>
+        <li><strong>Tools:</strong> Git, Linux</li>
+        <li><strong>Geo Software:</strong> Petrel, OpenWorks</li>
       </ul>
-
-      <p>
-        Completing projects and challenges with feedback from senior engineers.
-        Building a public portfolio and preparing for job interviews through
-        structured learning and mentorship.
-      </p>
-      <hr style="height:1px;border-width:0;color:gray;background-color:gray;margin:20px 0;">
-    </TimeLineElement> -->
-
-    <TimeLineElement
-      title="Sortation Associate at Amazon. C.A."
-      subtitle="From Nov 2020 to Jun 2025 at Amazon, Orlando, USA"
-    >
-      <p>
-        <strong>Safety Protocols:</strong> Established safety protocols, reducing workplace
-        accidents and ensuring a safer work environment.
-      </p>
-      <p>
-        <strong>Efficiency:</strong> Scanned, inspected, and sorted over 2000 packages daily,
-        maintaining over 90% accuracy to ensure timely deliveries.
-      </p>
-      <p>
-        <strong>Process Improvement:</strong> Identified performance shortcomings, resulting in a
-        10% increase in production in the packing-flow department.
-      </p>
-      <hr style="height:1px;border-width:0;color:gray;background-color:gray;margin:20px 0;">
-    </TimeLineElement>
-
-    <TimeLineElement
-      title="General Laborer"
-      subtitle="From Dec 2019 to Nov 2020, Self-employed, Orlando, USA"
-    >
-      <p>
-       <strong>Customer Satisfaction:</strong>  Delivered high-quality landscaping services to
-        20+ clients, resulting in a 100% client satisfaction rate.
-      </p>
-      <p>
-        <strong>Time Management:</strong> Efficiently completed landscaping projects ahead of
-        schedule, reducing project timelines by 15%.
-      </p>
-      <p>
-        <strong>Maintenance and Operations:</strong> Maintained tools and equipment to ensure a
-        high standard of service, increasing job efficiency.
-      </p>
-      <hr style="height:1px;border-width:0;color:gray;background-color:gray;margin:20px 0;">
-    </TimeLineElement>
-    <TimeLineElement
-      title="Sedimentologists & Stratigrapher at PDVSA"
-      subtitle="From Jan 2005 to Dec 2019 at PDVSA, Lecheria, Venezuela"
-    >
-      <p>
-        <strong>Geostatistical Modeling:</strong> Conducted geostatistical modeling and GIS-based
-        thematic mapping, improving project accuracy.
-      </p>
-      <p>
-        <strong>Hydrocarbon Prediction:</strong> Analyzed sedimentary rocks, improving model
-        predictions of hydrocarbon reservoirs by 30%.
-      </p>
-      <p>
-        <strong>Cross-functional Collaboration:</strong> Worked closely with geophysicists and
-        engineers to develop accurate geological models, speeding up project
-        completion by 10%.
-      </p>
-      
-    </TimeLineElement>
+    </div>
   </div>
 
-<!--   <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Courses</div>
+  <!-- LANGUAGES -->
+  <div class="mb-10">
+    <div class="section-title">Languages</div>
+
+    <div class="card">
+      <ul>
+        <li>Spanish – Native</li>
+        <li>English – Professional</li>
+        <li>French – Basic</li>
+      </ul>
+    </div>
   </div>
 
-  <ul class="list-disc mx-6 mb-10 grid gap-2">
-    <li>
-      <strong>IaC with Terraform</strong> - Focused on Infrastructure as Code, automation,
-      and scaling AWS resources using Terraform
-    </li>
-    <li>
-      <strong>Python and DevOps</strong> - Covered DevOps methodologies and automation
-      using Python in AWS environments
-    </li>
-    <li>
-      <strong>AWS Solutions Architecture</strong> - Designed around core AWS services
-      and architectural best practices for AWS
-    </li>
-    <li>
-      <strong>Cloud Foundations and Linux</strong> - Provided a solid understanding
-      of cloud concepts, Linux commands, and AWS
-    </li>
-  </ul> -->
-
-  <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Languages</div>
-  </div>
-
-  <ul class="list-disc mx-6 mb-10 grid gap-2">
-    <li>Spanish - Native</li>
-    <li>English - Professional working proficiency</li>
-    <li>French - Elementary proficiency</li>
-  </ul>
-
-  <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Skills</div>
-  </div>
-
-  <div class="mb-5">
-    <ul class="list-disc md:columns-5 columns-2 mx-6">
-      <li>React</li>
-      <li>React Router</li>
-      <li>Bootstrap</li>
-      <li>Metasploit</li>
-      <li>Penetration Testing</li>
-      <li>Burp Suite</li>
-      <li>JavaScript</li>
-      <li>Wireshark</li>
-      <li>AWS CDK</li>
-      <li>Python</li>
-      <li>SQL</li>
-      <li>Flask</li>
-      <li>AWS Boto3</li>
-      <li>Kali Linux</li>
-      <li>Dash-Plotly</li>
-    </ul>
-  </div>
-
-   <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Resume (PDF)</div>
-  </div>
-
-  <div class="mt-5">
-    <a href="Resume_Ivan Arias_Zaragoza.pdf" download class="btn btn-primary btn-sm mx-2"
-      >Download</a
-    >
-  </div> 
 </BaseLayout>
