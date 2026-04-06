@@ -2,7 +2,7 @@
 title: "Student Performance Dashboard"
 description: "This project creates an interactive dashboard to visualize and analyze the grades of high school students over time...."
 custom_link_label: "Live App"
-custom_link: "https://hcoco1.pythonanywhere.com/"
+custom_link: "https://www.dashboard.hcoco1.com/"
 updatedDate: "May 22 2024"
 category: "Web App"
 
@@ -14,11 +14,6 @@ heroImage: "https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=
 
 
 This project creates an interactive dashboard to visualize and analyze the grades of high school students over time. The dashboard is built using Python, Dash, and Plotly, with Bootstrap for styling.
-
-## Notice:
-
-- Username: **hcoco1**
-- Password: **pythonpython**
 
 - This dashboard is designed for both English and Spanish speakers and is currently being translated.
 
