@@ -15,7 +15,7 @@ export default defineConfig({
   integrations: [mdx(), sitemap(), tailwind(), react()],
   socialMedia: {
     image: '/public/profile.jpg',
-    description: 'Ivan Arias| Full Stack Development with Flask and React | Geologist'
+    description: 'Junior GIS Developer | Web GIS • Python • AWS '
   }
   
 });
