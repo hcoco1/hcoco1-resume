@@ -1,6 +1,7 @@
 ---
-import { CollectionEntry, getCollection } from "astro:content";
-import { StoreSchema } from "../../content/config";
+import { getCollection } from "astro:content";
+import type { CollectionEntry } from "astro:content";
+import type { StoreSchema } from "../../content/config";
 import StoreItemLayout from "../../layouts/StoreItemLayout.astro";
 
 export async function getStaticPaths() {
@@ -25,7 +26,6 @@ const { Content } = await entry.render();
   description={item.description}
   heroImage={item.heroImage}
   updatedDate={item.updatedDate}
-  heroImage={item.heroImage}
   category={item.category}
   repository={item.repository}
   repository_label={item.repository_label}

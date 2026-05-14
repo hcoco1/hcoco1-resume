@@ -1,15 +1,13 @@
 ---
 import { type StoreSchema } from "../content/config";
 import BaseLayout from "./BaseLayout.astro";
-import dayjs from "dayjs";
-import localizedFormat from "dayjs/plugin/localizedFormat";
+import { Image } from "astro:assets";
 
 export interface Props extends StoreSchema {}
 
 const {
   title,
   description,
-  updatedDate,
   heroImage,
   category,
   repository,
@@ -19,15 +17,11 @@ const {
   custom_link,
   custom_link_label,
 } = Astro.props;
-
-dayjs.extend(localizedFormat);
-const displayDate = dayjs(updatedDate).format("ll");
-import { Image } from "astro:assets";
 ---
 
 <BaseLayout title={title} description={description} image={heroImage}>
   <main class="md:flex md:justify-center">
-    <article class="prose prose-lg max-w-[750px] prose-img:mx-auto">
+    <article class="prose prose-lg max-w-[750px] prose-headings:text-base-content prose-p:text-base-content/80 prose-a:text-primary prose-strong:text-base-content prose-li:text-base-content/80 prose-img:mx-auto">
       {
         heroImage && (
           <Image
@@ -36,24 +30,24 @@ import { Image } from "astro:assets";
             format="webp"
             src={heroImage}
             alt={title}
-            class="w-full mb-6"
+            class="mb-6 w-full rounded-box"
           />
         )
       }
-      <div class="">
+      <div>
         <h1 class="title my-2 text-4xl font-bold">
           {title}
-          {badge && <div class="badge badge-secondary mx-2">{badge}</div>}
+          {badge && <div class="site-badge mx-2">{badge}</div>}
         </h1>
-        <div class="flex place-content-between items-center">
+        <div class="flex flex-col gap-4 md:flex-row md:place-content-between md:items-center">
           <div class="grow md:grow-0">
-            <span class="badge badge-info mr-1"> {category}</span>
+            <span class="badge badge-info badge-outline mr-1"> {category}</span>
           </div>
-          <div>
+          <div class="flex flex-wrap gap-2">
             {
               custom_link && (
                 <a
-                  class="btn btn-outline grow md:grow-0 ml-4"
+                  class="btn btn-outline grow md:grow-0"
                   href={custom_link}
                   target="_blank"
                 >
@@ -64,7 +58,7 @@ import { Image } from "astro:assets";
             {
               checkoutUrl && (
                 <a
-                  class="btn btn-outline grow md:grow-0 ml-4"
+                  class="btn btn-outline grow md:grow-0"
                   href={checkoutUrl}
                   target="_blank"
                 >
@@ -76,7 +70,7 @@ import { Image } from "astro:assets";
             {
               repository && (
                 <a
-                  class="btn btn-outline grow md:grow-0 ml-4"
+                  class="btn btn-outline grow md:grow-0"
                   href={repository}
                   target="_blank"
                 >

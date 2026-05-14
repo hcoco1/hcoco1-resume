@@ -1,187 +1,627 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import TimeLineElement from "../components/cv/TimeLine.astro";
 ---
 
 <style>
-  .section-title {
-    font-size: 1.75rem;
+  .resume {
+    --ink: oklch(var(--bc) / 1);
+    --muted: oklch(var(--bc) / 0.68);
+    --line: oklch(var(--bc) / 0.12);
+    --panel: oklch(var(--b1) / 0.78);
+    --accent: oklch(var(--p) / 1);
+    --accent-strong: oklch(var(--p) / 0.88);
+    --warm: oklch(var(--a) / 1);
+
+    color: var(--ink);
+    max-width: 980px;
+    margin: 0 auto;
+  }
+
+  .resume-shell {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background:
+      radial-gradient(circle at top right, oklch(var(--p) / 0.12), transparent 34rem),
+      linear-gradient(180deg, oklch(var(--b1) / 0.92), oklch(var(--b2) / 0.88));
+    box-shadow: 0 22px 60px oklch(var(--bc) / 0.10);
+  }
+
+  .resume-hero {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 280px;
+    gap: 2rem;
+    padding: clamp(1.4rem, 4vw, 3rem);
+    border-bottom: 1px solid var(--line);
+    background:
+      linear-gradient(135deg, oklch(var(--n) / 0.98), oklch(var(--p) / 0.92)),
+      oklch(var(--n) / 1);
+    color: oklch(var(--nc) / 1);
+  }
+
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.95rem;
+    color: oklch(var(--pc) / 0.86);
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .eyebrow::before {
+    content: "";
+    width: 2rem;
+    height: 2px;
+    background: var(--warm);
+  }
+
+  .resume h1 {
+    margin: 0;
+    color: oklch(var(--nc) / 1);
+    font-size: clamp(2.25rem, 7vw, 4.6rem);
+    font-weight: 900;
+    line-height: 0.94;
+    letter-spacing: 0;
+  }
+
+  .role {
+    margin-top: 1.05rem;
+    color: oklch(var(--pc) / 0.88);
+    font-size: clamp(1rem, 2vw, 1.28rem);
     font-weight: 700;
-    margin-bottom: 1rem;
-    border-left: 4px solid #3b82f6;
-    padding-left: 10px;
   }
 
-  .card {
-    background: #ffffff;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-    transition: transform 0.2s ease;
+  .summary {
+    max-width: 64ch;
+    margin-top: 1.35rem;
+    color: oklch(var(--nc) / 0.86);
+    font-size: 1rem;
+    line-height: 1.75;
   }
 
-  .card:hover {
-    transform: translateY(-3px);
+  .hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 1.65rem;
   }
 
-  .profile {
-    background: linear-gradient(135deg, #0f172a, #1e293b);
-    color: #e2e8f0;
-    padding: 25px;
-    border-radius: 12px;
+  .resume-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 2.75rem;
+    padding: 0 1rem;
+    border: 1px solid oklch(var(--nc) / 0.26);
+    border-radius: 6px;
+    color: oklch(var(--nc) / 1);
+    font-size: 0.92rem;
+    font-weight: 800;
+    text-decoration: none;
+    transition:
+      transform 160ms ease,
+      background 160ms ease,
+      border-color 160ms ease;
+  }
+
+  .resume-button.primary {
+    border-color: var(--warm);
+    background: var(--warm);
+    color: oklch(var(--ac) / 1);
+  }
+
+  .resume-button:hover {
+    transform: translateY(-2px);
+    border-color: oklch(var(--nc) / 0.58);
+    background: oklch(var(--nc) / 0.1);
+  }
+
+  .resume-button.primary:hover {
+    border-color: oklch(var(--a) / 0.82);
+    background: oklch(var(--a) / 0.82);
+  }
+
+  .quick-panel {
+    align-self: end;
+    border: 1px solid oklch(var(--nc) / 0.18);
+    border-radius: 8px;
+    background: oklch(var(--nc) / 0.08);
+    backdrop-filter: blur(16px);
+  }
+
+  .quick-item {
+    padding: 1rem;
+    border-bottom: 1px solid oklch(var(--nc) / 0.14);
+  }
+
+  .quick-item:last-child {
+    border-bottom: 0;
+  }
+
+  .quick-label {
+    display: block;
+    color: oklch(var(--pc) / 0.86);
+    font-size: 0.72rem;
+    font-weight: 900;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .quick-value {
+    display: block;
+    margin-top: 0.25rem;
+    color: oklch(var(--nc) / 1);
+    font-weight: 750;
+  }
+
+  .resume-body {
+    display: grid;
+    grid-template-columns: minmax(0, 1.4fr) minmax(250px, 0.75fr);
+    gap: clamp(1rem, 3vw, 2rem);
+    padding: clamp(1.2rem, 4vw, 2.25rem);
+  }
+
+  .resume-main,
+  .resume-side {
+    display: grid;
+    align-content: start;
+    gap: 1.25rem;
+  }
+
+  .section {
+    padding: clamp(1rem, 2.4vw, 1.35rem);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: var(--panel);
+  }
+
+  .section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1.05rem;
+  }
+
+  .section-title {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    margin: 0;
+    color: var(--ink);
+    font-size: 1.05rem;
+    font-weight: 900;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  .section-title::before {
+    content: "";
+    width: 0.72rem;
+    height: 0.72rem;
+    border: 3px solid var(--accent);
+    border-radius: 50%;
+    box-shadow: 0 0 0 4px oklch(var(--p) / 0.12);
+  }
+
+  .section-kicker {
+    color: var(--muted);
+    font-size: 0.82rem;
+    font-weight: 750;
+  }
+
+  .timeline {
+    display: grid;
+    gap: 1rem;
+  }
+
+  .timeline-item {
+    position: relative;
+    padding-left: 1.35rem;
+  }
+
+  .timeline-item::before {
+    content: "";
+    position: absolute;
+    top: 0.35rem;
+    left: 0;
+    width: 0.58rem;
+    height: 0.58rem;
+    border-radius: 50%;
+    background: var(--warm);
+    box-shadow: 0 0 0 5px oklch(var(--a) / 0.14);
+  }
+
+  .timeline-item::after {
+    content: "";
+    position: absolute;
+    top: 1.25rem;
+    bottom: -0.65rem;
+    left: 0.27rem;
+    width: 1px;
+    background: var(--line);
+  }
+
+  .timeline-item:last-child::after {
+    display: none;
+  }
+
+  .item-heading {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 0.35rem 1rem;
+    margin-bottom: 0.35rem;
+  }
+
+  .item-title {
+    color: var(--ink);
+    font-size: 1rem;
+    font-weight: 900;
+  }
+
+  .item-date {
+    color: var(--accent-strong);
+    font-size: 0.83rem;
+    font-weight: 850;
+  }
+
+  .impact-list {
+    margin: 0;
+    padding-left: 1.05rem;
+    color: oklch(var(--bc) / 0.78);
+    line-height: 1.62;
+  }
+
+  .impact-list li {
+    margin-bottom: 0.35rem;
+  }
+
+  .impact-list li::marker {
+    color: var(--accent);
+  }
+
+  .grid-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.85rem;
+  }
+
+  .mini-card {
+    min-height: 7rem;
+    padding: 1rem;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: oklch(var(--b1) / 0.72);
+  }
+
+  .mini-card strong {
+    display: block;
+    margin-bottom: 0.4rem;
+    color: var(--ink);
+    font-size: 0.98rem;
+    line-height: 1.25;
+  }
+
+  .mini-card p,
+  .mini-card span {
+    margin: 0;
+    color: var(--muted);
+    font-size: 0.91rem;
+    line-height: 1.5;
+  }
+
+  .skill-group {
+    display: grid;
+    gap: 0.9rem;
+  }
+
+  .skill-row {
+    display: grid;
+    gap: 0.55rem;
+  }
+
+  .skill-label {
+    color: var(--ink);
+    font-size: 0.82rem;
+    font-weight: 900;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  .chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+  }
+
+  .chip {
+    display: inline-flex;
+    align-items: center;
+    min-height: 2rem;
+    padding: 0 0.65rem;
+    border: 1px solid oklch(var(--p) / 0.18);
+    border-radius: 999px;
+    background: oklch(var(--p) / 0.08);
+    color: var(--accent-strong);
+    font-size: 0.82rem;
+    font-weight: 800;
+  }
+
+  .language-list {
+    display: grid;
+    gap: 0.65rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .language-list li {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    padding-bottom: 0.65rem;
+    border-bottom: 1px solid var(--line);
+    color: var(--ink);
+    font-weight: 850;
+  }
+
+  .language-list li:last-child {
+    padding-bottom: 0;
+    border-bottom: 0;
+  }
+
+  .language-list span {
+    color: var(--muted);
+    font-weight: 750;
   }
 
   .highlight {
-    color: #38bdf8;
-    font-weight: 600;
+    color: oklch(var(--pc) / 0.86);
+    font-weight: 850;
   }
 
-  ul li {
-    margin-bottom: 6px;
+  @media (max-width: 820px) {
+    .resume-hero,
+    .resume-body {
+      grid-template-columns: 1fr;
+    }
+
+    .quick-panel {
+      align-self: stretch;
+    }
+  }
+
+  @media (max-width: 620px) {
+    .resume-shell {
+      border-radius: 0;
+      margin-inline: -1.5rem;
+      border-left: 0;
+      border-right: 0;
+    }
+
+    .grid-list {
+      grid-template-columns: 1fr;
+    }
+
+    .section-header,
+    .item-heading {
+      align-items: flex-start;
+      flex-direction: column;
+    }
   }
 </style>
 
 <BaseLayout title="Resume" sideBarActiveItemID="cv">
+  <article class="resume">
+    <div class="resume-shell">
+      <header class="resume-hero">
+        <div>
+          <span class="eyebrow">Resume</span>
+          <h1>Ivan Arias</h1>
+          <p class="role">Junior GIS Developer | Web GIS • Python • AWS</p>
+          <p class="summary">
+            Geological engineer with 13+ years of experience in geospatial analysis and subsurface data interpretation,
+            transitioning into Web GIS development. Experienced with <span class="highlight">ArcGIS</span>, spatial data
+            modeling, Python, cloud systems, and web applications. Currently focused on building scalable GIS applications
+            and data-driven solutions.
+          </p>
 
-  <!-- PROFILE -->
-  <div class="mb-10 profile">
-    <div class="text-3xl font-bold mb-3">Ivan Arias</div>
-    <div class="text-lg mb-3">
-      <span class="highlight">Junior GIS Developer</span> | Web GIS • Python • AWS
+          <div class="hero-actions">
+            <a class="resume-button primary" href="/Resume_Ivan%20Arias_Zaragoza.pdf" target="_blank" rel="noreferrer">
+              View PDF Resume
+            </a>
+            <a class="resume-button" href="/portfolio">
+              See Portfolio
+            </a>
+          </div>
+        </div>
+
+        <aside class="quick-panel" aria-label="Resume highlights">
+          <div class="quick-item">
+            <span class="quick-label">Focus</span>
+            <span class="quick-value">Web GIS applications</span>
+          </div>
+          <div class="quick-item">
+            <span class="quick-label">Background</span>
+            <span class="quick-value">Geology + spatial data</span>
+          </div>
+          <div class="quick-item">
+            <span class="quick-label">Stack</span>
+            <span class="quick-value">Python, JavaScript, AWS</span>
+          </div>
+        </aside>
+      </header>
+
+      <div class="resume-body">
+        <div class="resume-main">
+          <section class="section" aria-labelledby="experience-title">
+            <div class="section-header">
+              <h2 class="section-title" id="experience-title">Experience</h2>
+              <span class="section-kicker">2005 - 2025</span>
+            </div>
+
+            <div class="timeline">
+              <div class="timeline-item">
+                <div class="item-heading">
+                  <h3 class="item-title">Sortation Associate - Amazon</h3>
+                  <span class="item-date">2020 - 2025</span>
+                </div>
+                <ul class="impact-list">
+                  <li>Processed 2,000+ records daily with 90%+ accuracy.</li>
+                  <li>Improved workflow efficiency by 10%.</li>
+                  <li>Worked with automated logistics and tracking systems.</li>
+                </ul>
+              </div>
+
+              <div class="timeline-item">
+                <div class="item-heading">
+                  <h3 class="item-title">General Laborer - Self-employed</h3>
+                  <span class="item-date">2019 - 2020</span>
+                </div>
+                <ul class="impact-list">
+                  <li>Delivered services to 20+ clients with high satisfaction.</li>
+                  <li>Optimized workflows and reduced project time by 15%.</li>
+                </ul>
+              </div>
+
+              <div class="timeline-item">
+                <div class="item-heading">
+                  <h3 class="item-title">Geology Technician / GIS Analysis - PDVSA</h3>
+                  <span class="item-date">2005 - 2019</span>
+                </div>
+                <ul class="impact-list">
+                  <li>Performed GIS analysis using ArcGIS.</li>
+                  <li>Integrated well logs and seismic data for modeling.</li>
+                  <li>Improved reservoir prediction accuracy by 30%.</li>
+                  <li>Worked with Petrel and OpenWorks.</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <section class="section" aria-labelledby="projects-title">
+            <div class="section-header">
+              <h2 class="section-title" id="projects-title">Projects</h2>
+              <span class="section-kicker">Selected work</span>
+            </div>
+
+            <div class="grid-list">
+              <div class="mini-card">
+                <strong>Web GIS Application</strong>
+                <p>Built interactive maps using React, Flask, and GeoJSON.</p>
+              </div>
+
+              <div class="mini-card">
+                <strong>AWS Infrastructure</strong>
+                <p>Deployed scalable cloud environments using Terraform.</p>
+              </div>
+
+              <div class="mini-card">
+                <strong>Python Data Tools</strong>
+                <p>Automated data processing and transformation workflows.</p>
+              </div>
+
+              <div class="mini-card">
+                <strong>Raspberry Pi NAS</strong>
+                <p>Configured a personal server for storage and networking.</p>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <aside class="resume-side">
+          <section class="section" aria-labelledby="education-title">
+            <div class="section-header">
+              <h2 class="section-title" id="education-title">Education</h2>
+            </div>
+
+            <div class="skill-group">
+              <div class="mini-card">
+                <strong>Cloud Mastery Bootcamp</strong>
+                <span>2024 - Digital Cloud Training</span>
+              </div>
+
+              <div class="mini-card">
+                <strong>Cybersecurity Bootcamp</strong>
+                <span>2024 - Fullstack Academy</span>
+              </div>
+
+              <div class="mini-card">
+                <strong>Full Stack Engineering</strong>
+                <span>2023 - Flatiron School</span>
+              </div>
+
+              <div class="mini-card">
+                <strong>Geological Engineering</strong>
+                <span>Central University of Venezuela</span>
+              </div>
+            </div>
+          </section>
+
+          <section class="section" aria-labelledby="skills-title">
+            <div class="section-header">
+              <h2 class="section-title" id="skills-title">Skills</h2>
+            </div>
+
+            <div class="skill-group">
+              <div class="skill-row">
+                <span class="skill-label">GIS</span>
+                <div class="chips">
+                  <span class="chip">ArcGIS</span>
+                  <span class="chip">Spatial Analysis</span>
+                </div>
+              </div>
+
+              <div class="skill-row">
+                <span class="skill-label">Programming</span>
+                <div class="chips">
+                  <span class="chip">Python</span>
+                  <span class="chip">JavaScript</span>
+                  <span class="chip">SQL</span>
+                </div>
+              </div>
+
+              <div class="skill-row">
+                <span class="skill-label">Web & Cloud</span>
+                <div class="chips">
+                  <span class="chip">React</span>
+                  <span class="chip">Flask</span>
+                  <span class="chip">AWS</span>
+                  <span class="chip">Terraform</span>
+                </div>
+              </div>
+
+              <div class="skill-row">
+                <span class="skill-label">Tools</span>
+                <div class="chips">
+                  <span class="chip">Git</span>
+                  <span class="chip">Linux</span>
+                  <span class="chip">Petrel</span>
+                  <span class="chip">OpenWorks</span>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="section" aria-labelledby="languages-title">
+            <div class="section-header">
+              <h2 class="section-title" id="languages-title">Languages</h2>
+            </div>
+
+            <ul class="language-list">
+              <li>Spanish <span>Native</span></li>
+              <li>English <span>Professional</span></li>
+              <li>French <span>Basic</span></li>
+            </ul>
+          </section>
+        </aside>
+      </div>
     </div>
-
-    <p class="text-justify">
-      Geological engineer with 13+ years of experience in geospatial analysis and subsurface data interpretation,
-      transitioning into Web GIS development. Experienced with <span class="highlight">ArcGIS</span>, spatial data modeling,
-      and modern technologies including Python, cloud systems, and web applications.
-      <br><br>
-      Currently focused on building scalable GIS applications and data-driven solutions.
-    </p>
-  </div>
-
-  <!-- EDUCATION -->
-  <div class="mb-10">
-    <div class="section-title">Education</div>
-
-    <div class="grid gap-4">
-      <div class="card">
-        <strong>Cloud Mastery Bootcamp</strong><br>
-        <span>2024 – Digital Cloud Training</span>
-      </div>
-
-      <div class="card">
-        <strong>Cybersecurity Bootcamp</strong><br>
-        <span>2024 – Fullstack Academy</span>
-      </div>
-
-      <div class="card">
-        <strong>Full Stack Engineering</strong><br>
-        <span>2023 – Flatiron School</span>
-      </div>
-
-      <div class="card">
-        <strong>Geological Engineering</strong><br>
-        <span>Central University of Venezuela</span>
-      </div>
-    </div>
-  </div>
-
-  <!-- EXPERIENCE -->
-  <div class="mb-10">
-    <div class="section-title">Experience</div>
-
-    <div class="grid gap-4">
-
-      <div class="card">
-        <strong>Sortation Associate – Amazon</strong>
-        <p class="text-sm text-gray-500">2020 – 2025</p>
-
-        <ul>
-          <li>Processed 2,000+ records daily with 90%+ accuracy</li>
-          <li>Improved workflow efficiency by 10%</li>
-          <li>Worked with automated logistics and tracking systems</li>
-        </ul>
-      </div>
-
-      <div class="card">
-        <strong>General Laborer – Self-employed</strong>
-        <p class="text-sm text-gray-500">2019 – 2020</p>
-
-        <ul>
-          <li>Delivered services to 20+ clients with high satisfaction</li>
-          <li>Optimized workflows and reduced project time by 15%</li>
-        </ul>
-      </div>
-
-      <div class="card">
-        <strong>Geology Technician / GIS Analysis – PDVSA</strong>
-        <p class="text-sm text-gray-500">2005 – 2019</p>
-
-        <ul>
-          <li>Performed GIS analysis using <span class="highlight">ArcGIS</span></li>
-          <li>Integrated well logs and seismic data for modeling</li>
-          <li>Improved reservoir prediction accuracy by 30%</li>
-          <li>Worked with Petrel and OpenWorks</li>
-        </ul>
-      </div>
-
-    </div>
-  </div>
-
-  <!-- PROJECTS -->
-  <div class="mb-10">
-    <div class="section-title">Projects</div>
-
-    <div class="grid gap-4">
-      <div class="card">
-        <strong>Web GIS Application</strong>
-        <p>Built interactive maps using React, Flask, and GeoJSON.</p>
-      </div>
-
-      <div class="card">
-        <strong>AWS Infrastructure</strong>
-        <p>Deployed scalable cloud environments using Terraform.</p>
-      </div>
-
-      <div class="card">
-        <strong>Python Data Tools</strong>
-        <p>Automated data processing and transformation workflows.</p>
-      </div>
-
-      <div class="card">
-        <strong>Raspberry Pi NAS</strong>
-        <p>Configured a personal server for storage and networking.</p>
-      </div>
-    </div>
-  </div>
-
-  <!-- SKILLS -->
-  <div class="mb-10">
-    <div class="section-title">Skills</div>
-
-    <div class="card">
-      <ul class="columns-2">
-        <li><strong>GIS:</strong> ArcGIS, Spatial Analysis</li>
-        <li><strong>Programming:</strong> Python, JavaScript, SQL</li>
-        <li><strong>Web:</strong> React, Flask</li>
-        <li><strong>Cloud:</strong> AWS, Terraform</li>
-        <li><strong>Tools:</strong> Git, Linux</li>
-        <li><strong>Geo Software:</strong> Petrel, OpenWorks</li>
-      </ul>
-    </div>
-  </div>
-
-  <!-- LANGUAGES -->
-  <div class="mb-10">
-    <div class="section-title">Languages</div>
-
-    <div class="card">
-      <ul>
-        <li>Spanish – Native</li>
-        <li>English – Professional</li>
-        <li>French – Basic</li>
-      </ul>
-    </div>
-  </div>
-
+  </article>
 </BaseLayout>

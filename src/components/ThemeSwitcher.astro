@@ -1,0 +1,24 @@
+---
+const themes = [
+  { value: "hcoco", label: "Hcoco" },
+  { value: "hcoco-dark", label: "Hcoco Dark" },
+  { value: "winter", label: "Winter" },
+  { value: "business", label: "Business" },
+  { value: "retro", label: "Retro" },
+  { value: "night", label: "Night" },
+  { value: "dracula", label: "Dracula" },
+];
+
+const { compact = false } = Astro.props;
+---
+
+<label class:list={["form-control w-full", compact && "max-w-32"]}>
+  <span class:list={["label py-1", compact && "sr-only"]}>
+    <span class="label-text text-xs font-bold uppercase tracking-wide text-base-content/65">
+      Theme
+    </span>
+  </span>
+  <select class="site-theme-select" data-choose-theme aria-label="Choose color theme">
+    {themes.map((theme) => <option value={theme.value}>{theme.label}</option>)}
+  </select>
+</label>

@@ -2,22 +2,32 @@
 import SideBarFooter from "./SideBarFooter.astro";
 import { Image } from "astro:assets";
 import SideBarMenu from "./SideBarMenu.astro";
+import ThemeSwitcher from "./ThemeSwitcher.astro";
 const { sideBarActiveItemID } = Astro.props;
 ---
 
 <div class="drawer-side z-40">
   <label for="my-drawer" class="drawer-overlay"></label>
-  <aside class="px-2 pt-2 h-auto min-h-full w-[19rem] bg-base-200 text-base-content flex flex-col">
-    <div class="w-fit mx-auto mt-5 mb-6">
+  <aside class="flex h-auto min-h-full w-[19rem] flex-col border-r border-base-300 bg-base-200 px-3 pt-3 text-base-content">
+    <div class="mx-auto mb-6 mt-5 w-fit">
       <a href="/">
-        <div class="avatar transition ease-in-out hover:scale-[102%] block m-auto">
-          <div class="w-[8.5rem]">
+        <div class="avatar m-auto block transition ease-in-out hover:scale-[102%]">
+          <div class="w-[8.5rem] ring-2 ring-primary/20 ring-offset-4 ring-offset-base-200">
             <Image class="mask mask-circle" format="webp" width={300} height={300} src="/profile.jpg" alt="Profile image" />
           </div>
         </div>
       </a>
+      <a href="/" class="mt-4 block text-center text-lg font-black tracking-normal">
+        Ivan Arias
+      </a>
+      <p class="mt-1 text-center text-sm font-medium text-base-content/60">
+        GIS Developer
+      </p>
     </div>
     <SideBarMenu sideBarActiveItemID={sideBarActiveItemID} />
+    <div class="mt-auto border-t border-base-300 px-2 py-4">
+      <ThemeSwitcher />
+    </div>
     <SideBarFooter />
   </aside>
 </div>

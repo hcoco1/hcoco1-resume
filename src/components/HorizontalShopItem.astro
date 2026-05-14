@@ -1,24 +1,11 @@
 ---
-const {
-  title,
-  img,
-  desc,
-  url,
-  badge,
-  category,
-  repository,
-  repository_label,
-  checkoutUrl,
-  details = true,
-  custom_link = false,
-  custom_link_label = "",
-} = Astro.props;
+const { title, img, desc, url, badge, category } = Astro.props;
 import { Image } from "astro:assets";
 ---
 
-<div class="rounded-lg bg-base-100 hover:shadow-xl transition ease-in-out hover:scale-[102%]">
-  <a href={url}>
-    <div class="hero-content flex-col md:flex-row">
+<div class="content-card">
+  <a href={url} class="block">
+    <div class="hero-content flex-col items-start md:flex-row">
       {
         img && (
           <Image
@@ -27,20 +14,19 @@ import { Image } from "astro:assets";
             format="webp"
             src={img}
             alt={title}
-            class="max-w-full md:max-w-[13rem] rounded-lg"
+            class="content-card-image"
           />
         )
       }
       <div class="grow w-full p-5 md:p-0">
-        <h1 class="text-xl font-bold">
+        <h2 class="content-card-title">
           {title}
-          {badge && <div class="badge badge-secondary mx-2">{badge}</div>}
-        </h1>
+          {badge && <div class="site-badge mx-2">{badge}</div>}
+        </h2>
         <div>
-          <span class="badge badge-info mr-1"> {category}</span>
-          
+          <span class="badge badge-info badge-outline mr-1"> {category}</span>
         </div>
-        <p class="py-1 text-1xl">{desc}</p>
+        <p class="content-card-description">{desc}</p>
       </div>
     </div>
   </a>

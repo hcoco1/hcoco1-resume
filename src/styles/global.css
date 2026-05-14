@@ -1,5 +1,100 @@
-.time-line-container>div:last-child .education__time>.education__line {
-    display: none;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    color-scheme: light;
+    scroll-behavior: smooth;
+  }
+
+  html[data-theme="hcoco-dark"],
+  html[data-theme="night"],
+  html[data-theme="business"] {
+    color-scheme: dark;
+  }
+
+  body {
+    @apply bg-base-100 text-base-content antialiased;
+  }
+
+  a {
+    @apply transition-colors;
+  }
+
+  ::selection {
+    @apply bg-primary text-primary-content;
+  }
 }
 
+@layer components {
+  .site-page {
+    @apply space-y-8;
+  }
 
+  .page-header {
+    @apply mb-6;
+  }
+
+  .page-title {
+    @apply text-4xl font-black tracking-normal text-base-content;
+  }
+
+  .page-lede {
+    @apply mt-3 max-w-3xl text-lg leading-8 text-base-content/75;
+  }
+
+  .surface-card {
+    @apply rounded-box border border-base-300 bg-base-100/80 shadow-sm transition duration-200;
+  }
+
+  .surface-card-hover {
+    @apply hover:-translate-y-0.5 hover:border-primary/30 hover:shadow-lg;
+  }
+
+  .content-card {
+    @apply surface-card surface-card-hover overflow-hidden;
+  }
+
+  .content-card-image {
+    @apply aspect-[16/9] w-full rounded-box object-cover md:max-w-[13rem];
+  }
+
+  .content-card-title {
+    @apply text-xl font-extrabold leading-tight text-base-content;
+  }
+
+  .content-card-description {
+    @apply py-1 text-base leading-7 text-base-content/75;
+  }
+
+  .site-badge {
+    @apply badge badge-secondary badge-outline font-semibold;
+  }
+
+  .site-theme-select {
+    @apply select select-bordered select-sm w-full border-base-300 bg-base-100 text-base-content;
+  }
+
+  .form-field {
+    @apply input input-bordered w-full bg-base-100 text-base-content;
+  }
+
+  .form-textarea {
+    @apply textarea textarea-bordered w-full bg-base-100 text-base-content;
+    min-height: 9rem;
+  }
+
+  .form-field::placeholder,
+  .form-textarea::placeholder {
+    color: oklch(var(--bc) / 0.45);
+  }
+
+  .form-feedback {
+    @apply mt-1 hidden text-sm font-medium text-error;
+  }
+
+  .time-line-container > div:last-child .education__time > .education__line {
+    display: none;
+  }
+}

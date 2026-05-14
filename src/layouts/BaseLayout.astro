@@ -5,8 +5,6 @@ import Footer from "../components/Footer.astro";
 import SideBar from "../components/SideBar.astro";
 
 import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
-const TRACKING_ID = import.meta.env.PUBLIC_TRACKING_ID!;
-const gaSrc = `https://www.googletagmanager.com/gtag/js?id=${TRACKING_ID}`;
 
 const {
   image,
@@ -22,9 +20,9 @@ const {
   <head>
     <BaseHead title={title} description={description} image={image} />
     <script is:inline>
-      // This script prevents the FART effect by setting the theme before the page is rendered.
+      // Prevent FOART: apply saved theme before first paint
       if (localStorage.getItem("theme") === null) {
-        document.documentElement.setAttribute("data-theme", "retro");
+        document.documentElement.setAttribute("data-theme", "hcoco");
       } else {
         document.documentElement.setAttribute(
           "data-theme",
@@ -32,43 +30,34 @@ const {
         );
       }
     </script>
-    <script type="module">
+    <!-- Processed by Astro/Vite so the npm import resolves correctly -->
+    <script>
       import { themeChange } from "theme-change";
       themeChange();
     </script>
   </head>
   <body>
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DT72EQSLX6"
-    ></script>
-    <script>
+    <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-DT72EQSLX6"></script>
+    <script is:inline>
+      // @ts-nocheck — GA boilerplate intentionally uses `arguments`
       window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
+      function gtag(){dataLayer.push(arguments);}
       gtag("js", new Date());
-
-      gtag("config", "TRACKING_ID");
+      gtag("config", "G-DT72EQSLX6");
     </script>
-    <div class="bg-base-100 drawer lg:drawer-open">
+    <div class="drawer min-h-screen bg-base-100 text-base-content lg:drawer-open">
       <input id="my-drawer" type="checkbox" class="drawer-toggle" />
-      <div class="drawer-content bg-base-100">
+      <div class="drawer-content min-h-screen bg-base-100">
         <Header title={SITE_TITLE} />
         <div class="md:flex md:justify-center">
-          <main class="p-6 pt-10 lg:max-w-[900px] max-w-[100vw]">
-            <!-- Modified: Added 'flex justify-end' to theme-switcher div -->
-
+          <main class="w-full max-w-[100vw] px-5 py-10 md:px-8 lg:max-w-[980px]">
             <slot />
           </main>
         </div>
-
         <Footer />
       </div>
       {includeSidebar && <SideBar sideBarActiveItemID={sideBarActiveItemID} />}
     </div>
-    <script type="module">
-      import { themeChange } from "https://cdn.skypack.dev/theme-change";
-      themeChange(true);
-    </script>
   </body>
 </html>

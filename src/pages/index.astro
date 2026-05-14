@@ -17,39 +17,31 @@ const last_projects = projects.slice(0, 3);
 ---
 
 <BaseLayout sideBarActiveItemID="home">
-  <div class="pb-12 mt-5">
-    <div class="theme-switcher flex justify-end">
-      <select data-choose-theme>
-        <option value="lemonade">Default</option>
-        <option value="dark">Dark</option>
-        <option value="retro">Retro</option>
-        <option value="aqua">Aqua</option>
-        <option value="valentine">Valentine</option>
-        
-      </select>
-    </div>
-    <div class="text-xl py-1">Hey there 👋</div>
-    <div class="text-5xl font-bold">I'm Ivan</div>
-    <div class="text-1xl py-3 font-bold">Junior GIS Developer | Web GIS • Python • AWS </div>
+  <div class="site-page">
+  <section class="surface-card p-6 md:p-8">
+    <div class="text-sm font-bold uppercase tracking-wide text-primary">Hey there</div>
+    <h1 class="mt-2 text-5xl font-black leading-none text-base-content">I'm Ivan</h1>
+    <p class="py-3 text-xl font-bold text-base-content/85">Junior GIS Developer | Web GIS • Python • AWS</p>
     <div class="mb-5">
-    <p class="text-justify">
+    <p class="max-w-3xl text-pretty leading-8 text-base-content/75">
       Geological engineer with 13+ years of experience in geospatial analysis and subsurface data interpretation,
-      transitioning into Web GIS development. Experienced with <span class="highlight">ArcGIS</span>, spatial data modeling,
+      transitioning into Web GIS development. Experienced with <span class="font-bold text-primary">ArcGIS</span>, spatial data modeling,
       and modern technologies including Python, cloud systems, and web applications.
       <br><br>
       Currently focused on building scalable GIS applications and data-driven solutions.
     </p>
     </div>
     <div class="mt-8">
-      <a class="btn" href="https://twitter.com/hcoco1" target="_blank">
+      <a class="btn btn-primary" href="https://twitter.com/hcoco1" target="_blank">
         Let's connect!</a
       >
     </div>
-  </div>
+  </section>
 
-  <div>
-    <div class="text-3xl w-full font-bold mb-2">Lastest projects {"</>"}</div>
-  </div>
+  <section>
+    <div class="page-header">
+      <h2 class="page-title">Latest projects</h2>
+    </div>
 
   {
     last_projects.map((item) => (
@@ -94,12 +86,12 @@ const last_projects = projects.slice(0, 3);
     
   /> -->
   <div class="divider my-0"></div>
+  </section>
 
-
-
-  <div>
-    <div class="text-3xl w-full font-bold mb-5 mt-10">Latest from blog</div>
-  </div>
+  <section>
+    <div class="page-header">
+      <h2 class="page-title">Latest from blog</h2>
+    </div>
 
   {
     last_posts.map((post) => (
@@ -116,4 +108,6 @@ const last_projects = projects.slice(0, 3);
       </>
     ))
   }
+  </section>
+  </div>
 </BaseLayout>

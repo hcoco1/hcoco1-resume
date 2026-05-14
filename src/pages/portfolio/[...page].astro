@@ -1,20 +1,28 @@
 ---
+import type { Page } from "astro";
+import type { CollectionEntry } from "astro:content";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import HorizontalShopItem from "../../components/HorizontalShopItem.astro";
 import { getCollection } from "astro:content";
 
-export async function getStaticPaths({ paginate }) {
+export async function getStaticPaths({ paginate }: { paginate: Function }) {
   const items = await getCollection("portfolio");
   items.sort((a, b) => b.data.updatedDate.valueOf() - a.data.updatedDate.valueOf());
   return paginate(items, { pageSize: 10 });
+}
+
+interface Props {
+  page: Page<CollectionEntry<"portfolio">>;
 }
 const { page } = Astro.props;
 ---
 
 <BaseLayout title="Portfolio" sideBarActiveItemID="portfolio">
-    <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Portfolio 🗃️</div>
-  </div>
+  <div class="site-page">
+  <header class="page-header">
+    <h1 class="page-title">Portfolio</h1>
+    <p class="page-lede">Selected GIS, web, cloud, data, and automation projects.</p>
+  </header>
   <ul>
     {
       page.data.map((item) => (
@@ -24,15 +32,8 @@ const { page } = Astro.props;
             img={item.data.heroImage}
             desc={item.data.description}
             category={item.data.category}
-            repository={item.data.repository}
-            repository_label={item.data.repository_label}
-            checkoutUrl={item.data.checkoutUrl}
             badge={item.data.badge}
-            details={item.data.details}
-            tags={item.data.tags}
             url={"/portfolio/" + item.slug}
-            custom_link={item.data.custom_link}
-            custom_link_label={item.data.custom_link_label}
           />
           <div class="divider my-0" />
         </>
@@ -79,5 +80,6 @@ const { page } = Astro.props;
         <div />
       )
     }
+  </div>
   </div>
 </BaseLayout>

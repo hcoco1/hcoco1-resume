@@ -1,9 +1,8 @@
 ---
-import Button from "@components/ui/button.astro";
+import Button from "../components/ui/button.astro";
 ---
 
-<!-- To make this contact form work, create your free access key from https://web3forms.com/
-     Then you will get all form submissions in your email inbox. -->
+<!-- Web3Forms: ensure allowed domains are configured in the Web3Forms dashboard -->
 <form
   action="https://api.web3forms.com/submit"
   method="POST"
@@ -17,48 +16,57 @@ import Button from "@components/ui/button.astro";
     value="dbef2f90-48ce-4d75-95c2-beb218063b86"
   />
 
-  <input type="checkbox" class="hidden" style="display:none" name="botcheck" />
+  <input type="checkbox" class="hidden" name="botcheck" />
+
   <div class="mb-5">
+    <label for="full_name" class="sr-only">Full Name</label>
     <input
+      id="full_name"
       type="text"
       placeholder="Full Name"
       required
-      class="w-full px-4 py-3 border-2 placeholder:text-black dark:text-white rounded-md outline-none dark:placeholder:text-white dark:bg-white-900 focus:ring-4 border-gray-300 focus:border-gray-600 ring-gray-100 dark:border-white-600 dark:focus:border-white dark:ring-0"
+      class="form-field"
       name="name"
     />
-    <div class="empty-feedback invalid-feedback text-red-400 text-sm mt-1">
+    <div class="empty-feedback invalid-feedback form-feedback">
       Please provide your full name.
     </div>
   </div>
+
   <div class="mb-5">
-    <label for="email_address" class="sr-only">Email Address</label><input
+    <label for="email_address" class="sr-only">Email Address</label>
+    <input
       id="email_address"
       type="email"
       placeholder="Email Address"
       name="email"
       required
-      class="w-full px-4 py-3 border-2 placeholder:text-black dark:text-white rounded-md outline-none dark:placeholder:text-white dark:bg-white-900 focus:ring-4 border-gray-300 focus:border-gray-600 ring-gray-100 dark:border-white-600 dark:focus:border-white dark:ring-0"
+      class="form-field"
     />
-    <div class="empty-feedback text-red-400 text-sm mt-1">
+    <div class="empty-feedback form-feedback">
       Please provide your email address.
     </div>
-    <div class="invalid-feedback text-red-400 text-sm mt-1">
+    <div class="invalid-feedback form-feedback">
       Please provide a valid email address.
     </div>
   </div>
+
   <div class="mb-3">
+    <label for="message" class="sr-only">Your Message</label>
     <textarea
+      id="message"
       name="message"
       required
       placeholder="Your Message"
-      class="w-full px-4 py-3 border-2 placeholder:text-black dark:text-white rounded-md outline-none dark:placeholder:text-white dark:bg-white-900 focus:ring-4 border-gray-300 focus:border-gray-600 ring-gray-100 dark:border-white-600 dark:focus:border-white dark:ring-0"
+      class="form-textarea"
     ></textarea>
-    <div class="empty-feedback invalid-feedback text-red-400 text-sm mt-1">
+    <div class="empty-feedback invalid-feedback form-feedback">
       Please enter your message.
     </div>
   </div>
+
   <Button type="submit" size="lg" block>Send Message</Button>
-  <div id="result" class="mt-3 text-center"></div>
+  <div id="result" class="mt-3 text-center font-medium"></div>
 </form>
 
 <style>
@@ -78,7 +86,7 @@ import Button from "@components/ui/button.astro";
   .is-invalid,
   .was-validated :invalid,
   .was-validated :invalid:focus {
-    border-color: #dc3545;
+    border-color: oklch(var(--er) / 1);
   }
 </style>
 
@@ -97,6 +105,7 @@ import Button from "@components/ui/button.astro";
     const object = Object.fromEntries(formData);
     const json = JSON.stringify(object);
 
+    result.className = "mt-3 text-center font-medium text-info";
     result.innerHTML = "Sending...";
 
     fetch("https://api.web3forms.com/submit", {
@@ -110,16 +119,17 @@ import Button from "@components/ui/button.astro";
       .then(async (response) => {
         let json = await response.json();
         if (response.status == 200) {
-          result.classList.add("text-green-500");
+          result.className = "mt-3 text-center font-medium text-success";
           result.innerHTML = json.message;
         } else {
           console.log(response);
-          result.classList.add("text-red-500");
+          result.className = "mt-3 text-center font-medium text-error";
           result.innerHTML = json.message;
         }
       })
       .catch((error) => {
         console.log(error);
+        result.className = "mt-3 text-center font-medium text-error";
         result.innerHTML = "Something went wrong!";
       })
       .then(function () {

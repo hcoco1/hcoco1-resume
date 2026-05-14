@@ -1,5 +1,9 @@
+---
+import ThemeSwitcher from "./ThemeSwitcher.astro";
+---
+
 <div
-  class="sticky lg:hidden top-0 z-30 flex h-16 w-full justify-center bg-opacity-90 backdrop-blur transition-all duration-100 bg-base-100 text-base-content shadow-sm"
+  class="sticky top-0 z-30 flex min-h-16 w-full justify-center border-b border-base-300 bg-base-100/90 text-base-content shadow-sm backdrop-blur transition-all duration-100 lg:hidden"
 >
   <div class="navbar">
     <div class="navbar-start">
@@ -10,8 +14,10 @@
       </label>
     </div>
     <div class="navbar-center">
-      <a class="btn btn-ghost normal-case text-xl" href="/">Ivan Arias ⚡️</a>
+      <a class="btn btn-ghost text-xl normal-case" href="/">Ivan Arias</a>
     </div>
-    <div class="navbar-end"></div>
+    <div class="navbar-end">
+      <ThemeSwitcher compact />
+    </div>
   </div>
 </div>
