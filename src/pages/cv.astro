@@ -1,5 +1,10 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import SchemaOrg from "../components/SchemaOrg.astro";
+
+const title = "Ivan Arias — CV & Resume | Junior GIS Developer | Zaragoza";
+const description =
+  "Resume of Ivan Arias, Junior GIS Developer and Geological Engineer based in Zaragoza, Spain. 13+ years of geospatial expertise. Skills: Python, React, Leaflet, ArcGIS, AWS, Flask, SQL. Available for GIS and full-stack roles.";
 ---
 
 <style>
@@ -67,7 +72,8 @@ import BaseLayout from "../layouts/BaseLayout.astro";
   }
 </style>
 
-<BaseLayout title="Resume — Ivan Arias" sideBarActiveItemID="cv">
+<BaseLayout title={title} description={description} ogType="profile" sideBarActiveItemID="cv">
+  <SchemaOrg type="person" slot="head" />
   <article class="mx-auto max-w-[980px] text-base-content">
     <div class="cv-shell relative overflow-hidden rounded-lg border border-base-content/10 shadow-2xl">
 

@@ -1,6 +1,7 @@
 ---
 import { type BlogSchema } from "../content/config";
 import BaseLayout from "./BaseLayout.astro";
+import SchemaOrg from "../components/SchemaOrg.astro";
 import dayjs from "dayjs";
 import localizedFormat from "dayjs/plugin/localizedFormat";
 
@@ -12,7 +13,18 @@ const displayDate = dayjs(pubDate).format("ll")
 import { Image } from "astro:assets";
 ---
 
-<BaseLayout title={title} description={description} image={heroImage}>
+<BaseLayout title={title} description={description} image={heroImage} ogType="article">
+  <SchemaOrg
+    slot="head"
+    type="article"
+    article={{
+      title,
+      description,
+      image: heroImage,
+      pubDate,
+      url: Astro.url.href,
+    }}
+  />
   <main class="md:flex md:justify-center">
     <article class="prose prose-lg max-w-[750px] prose-headings:text-base-content prose-p:text-base-content/80 prose-a:text-primary prose-strong:text-base-content prose-li:text-base-content/80 prose-img:mx-auto">
       {heroImage && <Image width={750} height={422} format="webp" src={heroImage} alt={title} class="mb-6 w-full rounded-box" />}

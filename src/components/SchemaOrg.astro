@@ -1,0 +1,151 @@
+---
+export interface Props {
+  type: 'website' | 'person' | 'article' | 'breadcrumb';
+  /** For type='article': post frontmatter data */
+  article?: {
+    title: string;
+    description: string;
+    image?: string;
+    pubDate: Date;
+    url: string;
+  };
+  /** For type='breadcrumb': list of { name, url } */
+  breadcrumbs?: { name: string; url: string }[];
+}
+
+import { SITE_URL, AUTHOR, TWITTER_HANDLE } from '../config';
+
+const { type, article, breadcrumbs } = Astro.props;
+
+const person = {
+  '@type': 'Person',
+  '@id': `${SITE_URL}/#person`,
+  name: AUTHOR,
+  url: SITE_URL,
+  email: 'arias.ivan@gmail.com',
+  image: `${SITE_URL}/profile.jpg`,
+  jobTitle: 'Junior GIS Developer',
+  description:
+    'Geological engineer with 13+ years of geospatial experience transitioning into Web GIS development. Specializing in Python, React, Leaflet, ArcGIS, and AWS.',
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Zaragoza',
+    addressCountry: 'ES',
+  },
+  sameAs: [
+    'https://github.com/hcoco1',
+    'https://www.linkedin.com/in/hcoco1',
+    `https://twitter.com/${TWITTER_HANDLE.replace('@', '')}`,
+    'https://hcoco1.github.io',
+  ],
+  knowsAbout: [
+    'Geographic Information Systems',
+    'Web GIS Development',
+    'Python',
+    'JavaScript',
+    'TypeScript',
+    'React',
+    'Leaflet',
+    'ArcGIS',
+    'AWS',
+    'Flask',
+    'SQLAlchemy',
+    'Geology',
+    'Subsurface Data Analysis',
+  ],
+  alumniOf: [
+    {
+      '@type': 'CollegeOrUniversity',
+      name: 'Flatiron School',
+      url: 'https://flatironschool.com',
+    },
+    {
+      '@type': 'CollegeOrUniversity',
+      name: 'Universidad Central de Venezuela',
+    },
+  ],
+};
+
+let schema: object;
+
+if (type === 'website') {
+  schema = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'WebSite',
+        '@id': `${SITE_URL}/#website`,
+        url: SITE_URL,
+        name: AUTHOR,
+        description:
+          'Portfolio and blog of Ivan Arias, Junior GIS Developer and Geological Engineer.',
+        publisher: { '@id': `${SITE_URL}/#person` },
+        potentialAction: {
+          '@type': 'SearchAction',
+          target: { '@type': 'EntryPoint', urlTemplate: `${SITE_URL}/blog?q={search_term_string}` },
+          'query-input': 'required name=search_term_string',
+        },
+      },
+      person,
+    ],
+  };
+} else if (type === 'person') {
+  schema = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        ...person,
+        '@type': ['Person', 'ProfilePage'],
+        mainEntityOfPage: {
+          '@type': 'WebPage',
+          '@id': `${SITE_URL}/cv`,
+          name: `${AUTHOR} — CV & Resume`,
+          url: `${SITE_URL}/cv`,
+        },
+        hasCredential: [
+          {
+            '@type': 'EducationalOccupationalCredential',
+            credentialCategory: 'Full Stack Software Engineering',
+            recognizedBy: { '@type': 'Organization', name: 'Flatiron School' },
+          },
+        ],
+        hasOccupation: {
+          '@type': 'Occupation',
+          name: 'GIS Developer',
+          occupationLocation: { '@type': 'Country', name: 'Spain' },
+          skills: 'Python, JavaScript, React, Leaflet, ArcGIS, AWS, Flask, SQL',
+        },
+      },
+    ],
+  };
+} else if (type === 'article' && article) {
+  schema = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: article.title,
+    description: article.description,
+    image: article.image ? new URL(article.image, SITE_URL).href : `${SITE_URL}/social_img.png`,
+    datePublished: article.pubDate.toISOString(),
+    dateModified: article.pubDate.toISOString(),
+    url: article.url,
+    author: { '@id': `${SITE_URL}/#person` },
+    publisher: { '@id': `${SITE_URL}/#person` },
+    mainEntityOfPage: { '@type': 'WebPage', '@id': article.url },
+  };
+} else if (type === 'breadcrumb' && breadcrumbs) {
+  schema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: breadcrumbs.map((crumb, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      name: crumb.name,
+      item: new URL(crumb.url, SITE_URL).href,
+    })),
+  };
+} else {
+  schema = {};
+}
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(schema)} />

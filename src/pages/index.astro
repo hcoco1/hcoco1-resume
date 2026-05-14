@@ -16,7 +16,11 @@ const projects = (await getCollection("portfolio")).sort(
 const last_projects = projects.slice(0, 3);
 ---
 
-<BaseLayout sideBarActiveItemID="home">
+<BaseLayout
+  title="Ivan Arias | Junior GIS Developer — Web GIS, Python & AWS"
+  description="Portfolio of Ivan Arias, Junior GIS Developer and Geological Engineer based in Zaragoza, Spain. Building Web GIS applications with Python, React, Leaflet, ArcGIS, and AWS."
+  sideBarActiveItemID="home"
+>
   <div class="site-page">
   <section class="surface-card p-6 md:p-8">
     <div class="text-sm font-bold uppercase tracking-wide text-primary">Hey there</div>

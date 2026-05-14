@@ -1,38 +1,76 @@
 ---
-// Import the global.css file here so that it is included on
-// all pages through the use of the <BaseHead /> component.
 import '../styles/global.css';
+import { SITE_URL, AUTHOR, TWITTER_HANDLE } from '../config';
 
 export interface Props {
-	title: string;
-	description: string;
-	image?: string;
+  title: string;
+  description: string;
+  image?: string;
+  /** Explicit canonical override — defaults to current page URL */
+  canonical?: string;
+  /** 'website' | 'article' | 'profile' */
+  ogType?: string;
+  /** Pass false on pages you don't want indexed (e.g. tag pages) */
+  noindex?: boolean;
 }
 
-const { title, description, image = '/profile.jpg' } = Astro.props;
+const {
+  title,
+  description,
+  image = '/social_img.png',
+  canonical,
+  ogType = 'website',
+  noindex = false,
+} = Astro.props;
+
+const canonicalURL = canonical ? new URL(canonical, SITE_URL) : new URL(Astro.url.pathname, SITE_URL);
+const imageURL = new URL(image, SITE_URL);
 ---
 
-<!-- Global Metadata -->
+<!-- Charset & viewport -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 <meta name="generator" content={Astro.generator} />
 
-<!-- Primary Meta Tags -->
+<!-- Canonical -->
+<link rel="canonical" href={canonicalURL} />
+
+<!-- Favicon -->
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+<!-- Theme color (adapts to browser chrome) -->
+<meta name="theme-color" content="#570df8" />
+
+<!-- Primary meta -->
 <title>{title}</title>
 <meta name="title" content={title} />
 <meta name="description" content={description} />
+<meta name="author" content={AUTHOR} />
+{noindex ? (
+  <meta name="robots" content="noindex, nofollow" />
+) : (
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+)}
 
-<!-- Open Graph / Facebook -->
-<meta property="og:type" content="website" />
-<meta property="og:url" content={Astro.url} />
+<!-- RSS auto-discovery -->
+<link rel="alternate" type="application/rss+xml" title={`${AUTHOR} — Blog RSS`} href={`${SITE_URL}/rss.xml`} />
+
+<!-- Open Graph -->
+<meta property="og:type" content={ogType} />
+<meta property="og:site_name" content={AUTHOR} />
+<meta property="og:url" content={canonicalURL} />
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
-<meta property="og:image" content={new URL(image, Astro.url)} />
+<meta property="og:image" content={imageURL} />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:locale" content="en_US" />
 
-<!-- Twitter -->
-<meta property="twitter:card" content="summary_large_image" />
-<meta property="twitter:url" content={Astro.url} />
-<meta property="twitter:title" content={title} />
-<meta property="twitter:description" content={description} />
-<meta property="twitter:image" content={new URL(image, Astro.url)} />
+<!-- Twitter / X -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content={TWITTER_HANDLE} />
+<meta name="twitter:creator" content={TWITTER_HANDLE} />
+<meta name="twitter:url" content={canonicalURL} />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={imageURL} />
