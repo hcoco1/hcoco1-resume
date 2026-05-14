@@ -8,9 +8,18 @@
     scroll-behavior: smooth;
   }
 
-  html[data-theme="hcoco-dark"],
+  html[data-theme="dark"],
+  html[data-theme="synthwave"],
+  html[data-theme="halloween"],
+  html[data-theme="forest"],
+  html[data-theme="aqua"],
+  html[data-theme="black"],
+  html[data-theme="luxury"],
+  html[data-theme="dracula"],
   html[data-theme="night"],
-  html[data-theme="business"] {
+  html[data-theme="coffee"],
+  html[data-theme="dim"],
+  html[data-theme="sunset"] {
     color-scheme: dark;
   }
 
@@ -57,7 +66,7 @@
   }
 
   .content-card-image {
-    @apply aspect-[16/9] w-full rounded-box object-cover md:max-w-[13rem];
+    @apply aspect-[16/9] w-full object-cover md:max-w-[13rem];
   }
 
   .content-card-title {
@@ -72,8 +81,8 @@
     @apply badge badge-secondary badge-outline font-semibold;
   }
 
-  .site-theme-select {
-    @apply select select-bordered select-sm w-full border-base-300 bg-base-100 text-base-content;
+  .highlight {
+    @apply font-semibold text-primary;
   }
 
   .form-field {
@@ -94,7 +103,4 @@
     @apply mt-1 hidden text-sm font-medium text-error;
   }
 
-  .time-line-container > div:last-child .education__time > .education__line {
-    display: none;
-  }
 }

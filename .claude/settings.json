@@ -1,7 +1,11 @@
 {
   "permissions": {
     "allow": [
-      "Bash(npx astro *)"
+      "Bash(npx astro *)",
+      "Bash(grep -v \"^--$\")",
+      "Bash(cat /proc/sys/fs/inotify/max_user_watches)",
+      "Read(//proc/sys/fs/inotify/**)",
+      "Bash(node -e \"const lib = require\\('/home/hcoco1/code/hcoco1-resume/node_modules/.pnpm/theme-change@2.5.0/node_modules/theme-change/index.js'\\); console.log\\(lib.toString\\(\\).slice\\(0,2000\\)\\)\")"
     ]
   }
 }

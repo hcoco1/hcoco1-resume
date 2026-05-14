@@ -22,7 +22,7 @@ const {
     <script is:inline>
       // Prevent FOART: apply saved theme before first paint
       if (localStorage.getItem("theme") === null) {
-        document.documentElement.setAttribute("data-theme", "hcoco");
+        document.documentElement.setAttribute("data-theme", "light");
       } else {
         document.documentElement.setAttribute(
           "data-theme",
