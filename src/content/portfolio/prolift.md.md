@@ -16,15 +16,19 @@ heroImage: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=
 
 ## Overview
 
-This project is a **mobile-first gym tracker application** designed to help users log and track their fitness progress, including:
+This project is a **mobile-first gym tracker application** built with **Claude Code** as my coding partner. I did not write the code by hand — instead, I designed the product, scoped the features, broke the work into tasks, and directed Claude Code through the full implementation. My role was that of the architect and product owner; Claude Code was the engineer.
 
-* Strength workouts (push, pull, legs, core)
-* Cardio sessions (duration, distance, calories)
-* Body measurements and photos
-* Workout history and statistics
-* Streaks and personal bests
+The application lets users:
 
-The app is built using **React 18 + Vite** on the frontend and **Supabase** for authentication and database, with full internationalization support across 6 languages.
+* Log strength workouts (push, pull, legs, core)
+* Record cardio sessions (duration, distance, calories)
+* Track body measurements and photos
+* Review workout history and statistics
+* Maintain streaks and personal bests
+
+The app is built on **React 18 + Vite** with **Supabase** for authentication and database, including full internationalization across 6 languages.
+
+This project represents a new stage in my journey: learning how to ship real full-stack web applications by collaborating with Claude Code rather than coding everything line by line.
 
 ---
 
@@ -89,6 +93,16 @@ The app is built using **React 18 + Vite** on the frontend and **Supabase** for 
 4. View history, stats, and progress charts
 5. Manage profile settings (units, language, theme)
 6. Track body measurements and photos
+
+---
+
+## My Workflow with Claude Code
+
+* **Design first, then prompt** — I wrote the feature list, data model, and UX flows before opening Claude Code
+* **Small, reviewable steps** — broke each feature into focused tasks (auth, then schema, then workout logging, then stats, then i18n)
+* **Read every diff** — reviewed each change and pushed back when the output drifted from the design
+* **Verify in the browser** — manually tested the golden path and edge cases after each iteration
+* **Iterate on prompts** — refined instructions when results were generic or missed the mobile-first intent
 
 ---
 
@@ -201,14 +215,16 @@ http://localhost:5173
 
 ## What I Learned
 
-* Building mobile-first responsive applications with React
-* Implementing internationalization with react-i18next
-* Managing state with React Context and custom hooks
-* Designing PWA features (service workers, install banners)
-* Working with Supabase for auth and real-time data
-* Creating reusable UI components with Tailwind + DaisyUI
-* Handling async data flows and optimistic updates
-* Implementing role-based access control and admin features
+This project taught me how to **direct Claude Code** to deliver a real, deployed product. The technical lessons came through that lens:
+
+* How to scope a full-stack app into prompts Claude Code can execute reliably
+* How to keep the AI focused — specifying mobile-first, i18n, and PWA constraints up front instead of mid-stream
+* How React 18 + Vite + Supabase fit together, by reading and reviewing every file Claude Code produced
+* How `react-i18next`, Context, and custom hooks compose — learned by reading the diffs, not by writing them
+* How PWA pieces (service workers, install banner, manifest) connect to a real deployment
+* How to debug Supabase auth, RLS, and edge functions when the AI's first attempt didn't work
+* How to recognize when Claude Code over-engineered something and ask it to simplify
+* That my value is in the design, the review, and the verification — not in typing the code
 
 ---
 

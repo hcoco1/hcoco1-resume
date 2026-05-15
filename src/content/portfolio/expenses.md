@@ -13,18 +13,22 @@ heroImage: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=133
 
 ## Overview
 
-This project is a **personal expense and income tracker application** designed to help users manage their finances effectively, including:
+This project is a **personal expense and income tracker application** built with **Claude Code** as my coding partner. I did not write the code by hand — I defined the product, the data model, and the user flows, and Claude Code implemented them under my direction.
+
+The application supports:
 
 * Tracking expenses and income by categories
-* Real-time dashboard with summaries and charts
+* A real-time dashboard with summaries and charts
 * Filtering by period, category, and currency
-* Sharing and exporting data (CSV/JSON/Web Share API)
+* Sharing and exporting data (CSV / JSON / Web Share API)
 * Multi-language support (English, Español, Nederlands)
 * Theme customization with 29 DaisyUI themes
-* Admin panel for user management
+* An admin panel for user management
 * PWA features for offline access
 
-The app is built using **React 18 + Vite** on the frontend and **Supabase** for authentication and database, with full internationalization and theming support.
+The app runs on **React 18 + Vite** with **Supabase** for authentication, database, and real-time subscriptions.
+
+This is part of a new stage in my work: learning how to design and ship full-stack web applications by collaborating with Claude Code instead of writing every line myself.
 
 ---
 
@@ -97,6 +101,16 @@ The app is built using **React 18 + Vite** on the frontend and **Supabase** for 
 4. View dashboard with summaries, filters, and charts
 5. Manage profile settings (theme, language, currency)
 6. Share/export data or access admin panel (if admin)
+
+---
+
+## My Workflow with Claude Code
+
+* **Specified the product before prompting** — categories, transactions, filters, exports, admin scope were defined up front
+* **Built feature by feature** — auth, then categories, then transactions, then the dashboard, then charts, then sharing/export
+* **Reviewed every change** — read the diffs, asked for refactors when Claude Code over-complicated something
+* **Tested in the browser** — verified flows, edge cases, and real-time updates after each iteration
+* **Treated prompting as a skill** — learned that vague prompts produce generic code; precise prompts produce production-ready code
 
 ---
 
@@ -202,14 +216,15 @@ http://localhost:5173
 
 ## What I Learned
 
-* Building responsive web applications with React and Vite
-* Implementing internationalization with custom hooks
-* Managing complex state with React Context
-* Designing PWA features (manifest, service workers, offline caching)
-* Working with Supabase for auth, database, and real-time subscriptions
-* Creating reusable UI components with Tailwind CSS and DaisyUI
-* Handling data export and sharing with Web APIs
-* Implementing role-based access and admin features
+The biggest lesson was **how to direct Claude Code to ship a real product**. The technical lessons came through that workflow:
+
+* How to break a full-stack app into prompts Claude Code can execute reliably
+* How React + Vite + Supabase fit together — by reading the code Claude Code wrote, not by writing it
+* How real-time subscriptions, RLS, and Postgres policies behave in practice when debugging Claude Code's first attempts
+* How PWA pieces (manifest, service worker, offline cache) compose into a working installable app
+* How to recognize when the AI's output drifts from the design and bring it back on track
+* How to use the Web Share API, clipboard, and CSV/JSON export — learned by reviewing the generated code
+* That my value is in the design, the product thinking, and the review — not in typing the code
 
 ---
 
